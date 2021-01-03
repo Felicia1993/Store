@@ -48,7 +48,7 @@ public class ThreadTest {
          * thenRun方法：只要上面的任务执行完成，就开始执行thenRun，知识处理完任务后执行thenRun的后续操作，不接受A的返回值，A执行完，执行B
          * 带有Async的是异步执行，
          */
-         CompletableFuture<Integer> completableFuture =  CompletableFuture.supplyAsync(() -> {
+         /*CompletableFuture<Integer> completableFuture =  CompletableFuture.supplyAsync(() -> {
             System.out.println("当前线程" + Thread.currentThread().getId());
             int i = 10 / 2;
             System.out.println("运行结果" + i);
@@ -57,7 +57,36 @@ public class ThreadTest {
             System.out.println("任务2启动了。。。" + res);
             return 0;
         }, execute);
-        System.out.println("main...end..." + completableFuture.get());
+        */
+
+        /**
+         * 两任务组合
+         * 两任务必须都完成，触发该任务
+         * thenCombine，组合两个future，获取两个future的返回结果，并返回当前任务的返回值
+         * thenAcceptBoth,组合两个future，获取两个任务的返回结果，然后处理任务，没有返回值
+         * runAfterBoth，组合两个future，不需要获取future的结果，只需要两个future处理完任务后，处理该任务
+         */
+        CompletableFuture<Integer> completableFuture01 =  CompletableFuture.supplyAsync(() -> {
+            System.out.println("任务1线程" + Thread.currentThread().getId());
+            int i = 10 / 2;
+            System.out.println("任务1结束");
+            return i;
+        }, execute);
+        CompletableFuture<String> completableFuture02 =  CompletableFuture.supplyAsync(() -> {
+            System.out.println("任务2线程：" + Thread.currentThread().getId());
+            return "hello";
+
+        }, execute);
+        /*completableFuture01.runAfterBothAsync(completableFuture02, ()->{
+            System.out.println("任务3开始。。。。。");
+        },execute);*/
+        /*completableFuture01.thenAcceptBothAsync(completableFuture02, (f1,f2)-> {
+            System.out.println("任务3开始。。。之前的结果" + f1 + "===>" + f2);
+        },execute);*/
+        CompletableFuture<String> future = completableFuture01.thenCombineAsync(completableFuture02, (f1,f2)->{
+            return f1 + ": " + f2+ "->hahah";
+        },execute);
+        System.out.println("main...end..." + future.get());
     }
 
 
@@ -120,7 +149,7 @@ public class ThreadTest {
          *  Executors.newScheduledThreadPool(100);//定时任务线程池
          *  Executors.newSingleThreadExecutor();//单线程线程池，后台从队列里获取任务，挨个执行
          */
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
+        /*ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
                 200,
                 10,
                 TimeUnit.SECONDS,
@@ -129,7 +158,7 @@ public class ThreadTest {
                 new ThreadPoolExecutor.AbortPolicy());
         //service.execute(new Runnable01());
         Executors.newSingleThreadExecutor();
-        System.out.println("main....end...." );
+        System.out.println("main....end...." );*/
     }
 
     public static class Thread01 extends Thread{

@@ -24,7 +24,7 @@ public class ThreadTest {
         }).exceptionally(throwable -> {
             //可以感知异常，同时返回默认值
             return 10;
-        });*/
+        });
         //方法执行完成后的处理
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(()->{
             System.out.println("当前线程" + Thread.currentThread().getId());
@@ -40,7 +40,24 @@ public class ThreadTest {
             }
             return 0;
         });
-        System.out.println("main...end..." + future.get());
+        System.out.println("main...end..." + future.get());*/
+        /**
+         * 线程串行化方法
+         * thenApply:当一个线程依赖另一个线程是，获取上一个任务的结果，并返回当前任务的返回值，接受A的返回值，返回B的返回值
+         * thenAccept：消费处理结果，接受任务的处理结果，并消费处理，无返回结果，接受A的返回值，处理B
+         * thenRun方法：只要上面的任务执行完成，就开始执行thenRun，知识处理完任务后执行thenRun的后续操作，不接受A的返回值，A执行完，执行B
+         * 带有Async的是异步执行，
+         */
+         CompletableFuture<Integer> completableFuture =  CompletableFuture.supplyAsync(() -> {
+            System.out.println("当前线程" + Thread.currentThread().getId());
+            int i = 10 / 2;
+            System.out.println("运行结果" + i);
+            return i;
+        }, execute).thenApplyAsync(res -> {
+            System.out.println("任务2启动了。。。" + res);
+            return 0;
+        }, execute);
+        System.out.println("main...end..." + completableFuture.get());
     }
 
 

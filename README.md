@@ -37,3 +37,12 @@ docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25
 1883，8883（MQTT协议端口） 
 
 docker update rabbitmq --restart=always
+
+### RabbitMQ运行机制 
+Exchange类型 
+direct:直接交换机，单播模式、点对点通信模式完全匹配 
+
+fanout：实现发布订阅，广播模式，不关心路由件是什么 
+
+topic：发布订阅模式，部分广播，绑定关系可以用通配符，#匹配0个或多个单词，*匹配一个单词  
+

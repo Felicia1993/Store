@@ -11,7 +11,8 @@ public class ThreadTest {
             System.out.println("当前线程" + Thread.currentThread().getId());
             int i = 10/2;
             System.out.println("运行结果" + i);
-        },execute);*/
+        },execute);
+        //方法成功完成后的处理
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(()->{
             System.out.println("当前线程" + Thread.currentThread().getId());
             int i = 10/2;
@@ -23,9 +24,22 @@ public class ThreadTest {
         }).exceptionally(throwable -> {
             //可以感知异常，同时返回默认值
             return 10;
+        });*/
+        //方法执行完成后的处理
+        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(()->{
+            System.out.println("当前线程" + Thread.currentThread().getId());
+            int i = 10/2;
+            System.out.println("运行结果" + i);
+            return i;
+        },execute).handle((res, throwable) -> {
+            if (res != null ) {
+                return res*2;
+            }
+            if (throwable != null) {
+                return 0;
+            }
+            return 0;
         });
-        //计算完成时回调方法
-
         System.out.println("main...end..." + future.get());
     }
 

@@ -66,27 +66,75 @@ public class ThreadTest {
          * thenAcceptBoth,组合两个future，获取两个任务的返回结果，然后处理任务，没有返回值
          * runAfterBoth，组合两个future，不需要获取future的结果，只需要两个future处理完任务后，处理该任务
          */
-        CompletableFuture<Integer> completableFuture01 =  CompletableFuture.supplyAsync(() -> {
+       /* CompletableFuture<Object> completableFuture01 =  CompletableFuture.supplyAsync(() -> {
             System.out.println("任务1线程" + Thread.currentThread().getId());
             int i = 10 / 2;
             System.out.println("任务1结束");
             return i;
         }, execute);
-        CompletableFuture<String> completableFuture02 =  CompletableFuture.supplyAsync(() -> {
+        CompletableFuture<Object> completableFuture02 =  CompletableFuture.supplyAsync(() -> {
+            try {
+                Thread.sleep(3);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("任务2线程：" + Thread.currentThread().getId());
             return "hello";
 
-        }, execute);
+        }, execute);*/
         /*completableFuture01.runAfterBothAsync(completableFuture02, ()->{
             System.out.println("任务3开始。。。。。");
         },execute);*/
         /*completableFuture01.thenAcceptBothAsync(completableFuture02, (f1,f2)-> {
             System.out.println("任务3开始。。。之前的结果" + f1 + "===>" + f2);
-        },execute);*/
+        },execute);
         CompletableFuture<String> future = completableFuture01.thenCombineAsync(completableFuture02, (f1,f2)->{
             return f1 + ": " + f2+ "->hahah";
         },execute);
-        System.out.println("main...end..." + future.get());
+        System.out.println("main...end..." + future.get());*/
+        /**
+         * 两个任务组合，一个完成
+         * applyToEither,两个任务有一个执行完成，获取它的返回值，处理任务并有新的返回值
+         * acceptEither,两个任务有一个执行 完成，获取它的返回值，处理任务，没有新的返回值
+         * runAfterEither,两个任务有一个执行完，不需要获取future的结果，处理任务，也没有返回值
+         */
+        /*completableFuture01.runAfterEitherAsync(completableFuture02,()->{
+            System.out.println("任务3开始。。。。。");
+        },execute);*/
+
+        /*completableFuture01.acceptEitherAsync(completableFuture02, (res)->{
+            System.out.println("任务3开始。。。。。" + res);
+        },execute);*/
+
+        /*completableFuture01.applyToEitherAsync(completableFuture02, res->{
+            System.out.println("任务3开始。。。。。" + res);
+           return res.toString()+"hahahh";
+        },execute);*/
+        /**
+         * 多任务组合
+         */
+        final CompletableFuture<String> future01 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("商品的图片信息");
+            return "1.jpg";
+        });
+        CompletableFuture<String> future02 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("商品的属性");
+            try {
+                Thread.sleep(3);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return "黑色+256G";
+        });
+        final CompletableFuture<String> future03 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("查询商品的介绍");
+            return "华为";
+        });
+     //   CompletableFuture<Void> voidCompletableFuture = CompletableFuture.allOf(future01, future02, future03);
+        final CompletableFuture<Object> objectCompletableFuture = CompletableFuture.anyOf(future01, future02, future03);
+        objectCompletableFuture.get();
+        System.out.println("main...end...." + future01.get() + future02.get() + future03.get());
+
     }
 
 

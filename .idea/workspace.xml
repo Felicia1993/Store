@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6a31d1a-1281-4f7f-889e-c6ecf16aba75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/cache_contract.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/src/main/java/com/power/demo/cache/contract/CacheProviderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_contract/src/main/java/com/power/demo/cache/impl/LocalCacheProviderImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/leetcode/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/ExecutorLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/SingletonDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/BlockingQueueDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/TaskDisposeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/semaphore/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/semaphore/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo201.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/AccountingSync.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/InterruptSleepThread3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/InterruptedThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/SynchronizedBlocked.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/coupondemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/src/main/java/com/xdclass/xdclassshop/XdclassShopApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupondemo/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01资料/代码/security-spring-boot/security-spring-boot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01资料/代码/security-spring-security/security-spring-security.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/distributed-security.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-discovery/distributed-security-discovery.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-gateway/distributed-security-gateway.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-order/distributed-security-order.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-uaa/distributed-security-uaa.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02资料/代码/security-spring-boot/security-spring-boot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/src/main/java/com/itheima/security/distributed/discovery/DiscoveryServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/src/main/java/com/itheima/security/distributed/order/OrderServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/src/main/resources/application.properities" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/src/main/java/com/itheima/security/distributed/uaa/UAAServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/src/main/resources/application.properities" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-admin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/leader-selector-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/src/main/java/zookeeper/configurecenter/ConfigCenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leader-selector-demo/src/main/java/zookeeper/configurecenter/LeaderSelectorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/mybatis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/test/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/test/TestJDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mybatis.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/src/test/java/com/mybatis/demo/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/redisLock.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/src/main/java/com/enjoylearning/demo/lock/RedisImproveLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisLock/src/main/java/com/enjoylearning/demo/lock/Subscribe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/rpcstudy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/consumer/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/framework/Invocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/framework/URL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/DispatcherServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/Provider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/api/HelloService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/impl/HelloServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/register/LocalRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/register/RemoteMapRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpcstudy/src/test/java/org/rpcstudy/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/src/client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/src/main/java/com/fpm/framework/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/hello-service-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/hello-service-api/src/main/java/com/fpm/framework/hello/HelloService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/NameService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/RpcAccessPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/ServiceLoadException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/ServiceSupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/NettyRpcAccessPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/RequestIdSupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/DynamicStubFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/ServiceSub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/ServiceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/StubFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/stubs/AbstractSub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/stubs/RpcRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/nameservice/LocalFileNameService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/nameservice/Metadata.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/SerializeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/SerializeSupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/Serializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/server/RpcRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/server/ServiceProviderRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/InFlightRequests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/RequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/RequestHandlerRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/ResponseFuture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/Transport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/TransportClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/TransportServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Code.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Header.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/ResponseHeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/CommandDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/CommandEncoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/NettyTransport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/RequestInvocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.NameService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.RpcAccessPoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.client.StubFactory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/rpc-netty.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/simple-rpm-framework-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/CouponAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/config/DruidConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/config/DubboConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/java/com/xdclass/plugins/AddLimitOffsetPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/java/com/xdclass/plugins/Generator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/resources/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/main/java/com/xdclass/xdclassshop/XdclassShopApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/test/java/com/xdclass/xdclassshop/XdclassShopApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/config/DubboConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TCouponMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TCouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserCouponMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserCouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TCoupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TCouponExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUser.java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserCoupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserCouponExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserExample.java.1" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="$USER_HOME$/Downloads/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mYa4l8lo36akChNBMGzgGT6NyD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.StoreOrderApplicationTests">
+    <configuration name="ThreadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.store.search.thread.ThreadTest" />
+      <module name="store-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.search.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreOrderApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.order" />
+      <option name="MAIN_CLASS_NAME" value="com.store.order.StoreOrderApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreOrderApplicationTests.createExchange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.order" />
+      <option name="MAIN_CLASS_NAME" value="com.store.order.StoreOrderApplicationTests" />
+      <option name="METHOD_NAME" value="createExchange" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StoreOrderApplicationTests" />
+        <item itemvalue="JUnit.StoreOrderApplicationTests.createExchange" />
+        <item itemvalue="Application.ThreadTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6a31d1a-1281-4f7f-889e-c6ecf16aba75" name="Default Changelist" comment="" />
+      <created>1609672788964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609672788964</updated>
+      <workItem from="1609672790410" duration="10647000" />
+      <workItem from="1609770216779" duration="156000" />
+      <workItem from="1609770379242" duration="109000" />
+      <workItem from="1609770606628" duration="1150000" />
+      <workItem from="1609771938115" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1396" height="245" key="GridCell.Tab.0.bottom" timestamp="1609683769015">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609683769015" />
+    <state width="1396" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1609677799324" />
+    <state width="1396" height="245" key="GridCell.Tab.0.center" timestamp="1609683769014">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1609683769014" />
+    <state width="1396" height="204" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1609677799323" />
+    <state width="1396" height="245" key="GridCell.Tab.0.left" timestamp="1609683769014">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1609683769014" />
+    <state width="1396" height="204" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1609677799323" />
+    <state width="1396" height="245" key="GridCell.Tab.0.right" timestamp="1609683769015">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1609683769015" />
+    <state width="1396" height="204" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1609677799324" />
+    <state width="1396" height="254" key="GridCell.Tab.1.bottom" timestamp="1609673342479">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1396" height="254" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1609673342479" />
+    <state width="1396" height="254" key="GridCell.Tab.1.center" timestamp="1609673342478">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1396" height="254" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1609673342478" />
+    <state width="1396" height="254" key="GridCell.Tab.1.left" timestamp="1609673342478">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1396" height="254" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1609673342478" />
+    <state width="1396" height="254" key="GridCell.Tab.1.right" timestamp="1609673342479">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1396" height="254" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1609673342479" />
+    <state x="258" y="68" key="Maven.ArtifactSearchDialog" timestamp="1609770897301">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="258" y="68" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1609770897301" />
+    <state x="258" y="83" key="Maven.ArtifactSearchDialog/0.23.1440.797@0.23.1440.797" timestamp="1609676717216" />
+    <state x="127" y="125" key="NewModule_or_Project.wizard" timestamp="1609770452378">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="127" y="125" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1609770452378" />
+    <state x="425" y="159" key="RollbackChangesDialog" timestamp="1609771970724">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="425" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1609771970724" />
+    <state x="0" y="0" width="1440" height="797" key="SettingsEditor" timestamp="1609771996376">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1609771996376" />
+    <state x="0" y="23" width="1440" height="797" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1609673188066" />
+    <state x="418" y="205" width="604" height="490" key="find.popup" timestamp="1609769110976">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="418" y="205" width="604" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1609769110976" />
+    <state x="88" y="69" key="new project wizard" timestamp="1609724051538">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="88" y="69" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1609724051538" />
+    <state x="88" y="84" key="new project wizard/0.23.1440.797@0.23.1440.797" timestamp="1609672887227" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1609769487143">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1609769487143" />
+  </component>
+</project>

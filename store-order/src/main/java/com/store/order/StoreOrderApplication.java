@@ -1,4 +1,4 @@
-package com.store.order.controller;
+package com.store.order;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;

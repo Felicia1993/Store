@@ -1,7 +1,5 @@
 package com.store.order;
 
-import com.store.order.controller.StoreOrderApplication;
-import javafx.application.Application;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,15 +11,12 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.annotation.Resource;
 
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(classes = StoreOrderApplicationTests.class)
+
 public class StoreOrderApplicationTests {
     /**
      * 1.如何创建Exchange[hello-java-exchange] queue binding

@@ -9,6 +9,7 @@ import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -16,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
 public class StoreOrderApplicationTests {
     /**
      * 1.如何创建Exchange[hello-java-exchange] queue binding
@@ -25,9 +25,18 @@ public class StoreOrderApplicationTests {
      */
     @Autowired
     AmqpAdmin amqpAdmin;
+    @Autowired
+    RabbitTemplate rabbitTemplate;
     Logger logger = LoggerFactory.getLogger(StoreOrderApplicationTests.class);
+    @Test
+    public void sendMessage(){
+        //发送消息,如果发送的消息是个对象，会使用序列化机制，将对象写出去，对象必须实现serialize
+        String msg = "Hello World!";
+        rabbitTemplate.convertAndSend("hello.java.exchange", "hello.java", msg);
+        logger.info("消息发送完成[{}]", msg);
+        //2。发送的对象类型的消息，可以使一个json
 
-
+    }
     @Test
     public void createExchange() {
         //amqpAdmin
@@ -53,7 +62,7 @@ public class StoreOrderApplicationTests {
         //将exchange指定的交换机和destination目的地进行绑定，使用routineey作为指定的路由件
         Binding binding = new Binding("hello-java-queue",
                 Binding.DestinationType.QUEUE,
-                "hello-java-exchange",
+                "hello.java.exchange",
                 "hello.java", null);
         amqpAdmin.declareBinding(binding);
         logger.info("Queue[{}]绑定成功", "hello-java-exchange");

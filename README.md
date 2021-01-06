@@ -16,11 +16,23 @@ mkdir -p /mydata/elasticsearch/config
 
 mkdir -p /mydata/elasticsearch/data 
 
-echo "http.host:0.0.0.0" >> /mydata/elasticsearch/config/elasticsearch.yml 
+echo "http.host: 0.0.0.0" >> /mydata/elasticsearch/config/elasticsearch.yml 
 
-docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \ 
--e "discovery.type=signle-node" \
--e ES_JVAV_OPTS="-Xms64m -Xms28m"
+docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" \
+-e ES_JVAV_OPTS="-Xms64m -Xmx128m -XX:+UseG1GC" \
+-v /Users/Java/mydata/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
+-v /Users/Java/mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+-v /Users/Java/mydata/elasticsearch/plugin:/usr/share/elasticsearch/plugin \
+-d elasticsearch:7.4.2 
+
+启动后访问浏览器127.0.0.1:9200端口失败，docker logs elasticsearch可以查看错误日志 
+
+安装kibana 
+
+docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.124.8:9200 -p 5601:5601 \
+-d kibana:7.4.2
+
 
 ## Dokcer安装RabbitMQ
 
@@ -46,3 +58,4 @@ fanout：实现发布订阅，广播模式，不关心路由件是什么
 
 topic：发布订阅模式，部分广播，绑定关系可以用通配符，#匹配0个或多个单词，*匹配一个单词  
 
+## 认证中心（社交登录，Oauth2.0，单点登录）

@@ -32,7 +32,46 @@ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
 
 docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.124.8:9200 -p 5601:5601 \
 -d kibana:7.4.2
+### 初步检索
+1._cat 
+GET _cat/nodes:查看所有节点 
+GET _cat/health:查看es健康状况
+GET _cat/master:查看主节点
+GET _cat/indices:查看所有索引 show databases; 
 
+#### 索引一个文档（保存）  
+
+保存一个数据，保存着哪个索引的哪个类型下，哪个数据库的哪个标识 
+PUT customer/external/1: 在customer索引下的external类型下保存1号数据为 
+
+#### 查询文档 
+/customer/external/1 
+
+结果 
+
+{ 
+
+    "_index": "customer",//在哪个索引 
+
+    "_type": "external", //在哪个类型 
+
+    "_id": "1", //记录id 
+
+    "_version": 1, //版本号 
+
+    "_seq_no": 0, //并发控制字段，每次更新就会+1，用来做乐观锁 
+
+    "_primary_term": 1, //同上，主分片重新分配，如重启，就会变化 
+
+    "found": true, 
+
+    "_source": { //真正的内容 
+
+        "name": "Jone Doe" 
+
+   } 
+
+}
 
 ## Dokcer安装RabbitMQ
 

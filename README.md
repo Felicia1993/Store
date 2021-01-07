@@ -30,21 +30,26 @@ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
 
 安装kibana 
 
-docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.124.8:9200 -p 5601:5601 \
+docker run --name kibana -e ELASTICSEARCH_HOSTS=http://10.36.214.130:9200 -p 5601:5601 \
 -d kibana:7.4.2
 ### 初步检索
-1._cat 
-GET _cat/nodes:查看所有节点 
-GET _cat/health:查看es健康状况
-GET _cat/master:查看主节点
-GET _cat/indices:查看所有索引 show databases; 
+1._cat  
 
-#### 索引一个文档（保存）  
+GET _cat/nodes:查看所有节点  
+
+GET _cat/health:查看es健康状况 
+
+GET _cat/master:查看主节点 
+
+GET _cat/indices:查看所有索引 show databases;  
+
+
+#### 2.索引一个文档（保存）  
 
 保存一个数据，保存着哪个索引的哪个类型下，哪个数据库的哪个标识 
 PUT customer/external/1: 在customer索引下的external类型下保存1号数据为 
 
-#### 查询文档 
+#### 3.查询文档 
 /customer/external/1 
 
 结果 
@@ -71,8 +76,61 @@ PUT customer/external/1: 在customer索引下的external类型下保存1号数�
 
    } 
 
-}
+} 
 
+4.更新携带 ?if_seq_no=0&if_primary_term=1 
+
+更新文档 
+post customer/external/1/_update 
+
+{
+    "doc": {
+        "name": "John Dewn"
+    }
+} 
+
+重复提交相同内容，版本号不会改变
+
+
+更新同时增加属性 
+方式1：post带update，json内容必须带doc 
+
+{ 
+
+    "doc": { 
+
+        "name": "John Dewn", 
+
+	  "age": "20" 
+
+    } 
+
+} 
+方式2:post和put不带update 
+
+{ 
+
+    "name": "John Dewn", 
+
+    "age": 20 
+
+} 
+
+5.删除文档&索引 
+
+delete /customer/external/1/ 
+
+delete /customer/
+
+6.bulk批量导入数据  
+
+elasticsearch官方
+
+语法格式 
+{"index": {"_id": "1"}} \
+{"name": "John Doe"}
+{"index": {"_id": "2"}}
+{"name": "John"}
 ## Dokcer安装RabbitMQ
 
 docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management 

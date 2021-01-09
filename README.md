@@ -192,6 +192,8 @@ queryDSL的查询结构
 ## 分词
 一个tokenizer（分词器）接受一个字符流，将值分给为独立的tokens，然后输出分词流 
 
+https://github.com/medcl/elasticsearch-analysis-ik/releases?after=v7.7.0
+
 docker run -p 80:80 --name nginx \
 -v /Users/Java/mydata/nginx/html:/usr/share/nginx/html \
 -v /Users/Java/mydata/nginx/logs:/var/log/nginx \

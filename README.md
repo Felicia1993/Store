@@ -1,4 +1,19 @@
 # Store
+模块：
+商品服务
+仓储服务
+订单服务 
+优惠券服务
+用户服务 
+
+共同： 
+
+1）web openfeign 
+
+2) 每个服务，包名com.store.xxx(product/order/ware/coupon/memeber) 
+
+3) 模块名：store-coupon
+
 ## ElasticSearch
 概念：1.索引-->datablase 2.类型-->table 3.文档-->数据行 4.属性-->mysql列 
 
@@ -30,7 +45,7 @@ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
 
 安装kibana 
 
-docker run --name kibana -e ELASTICSEARCH_HOSTS=http://10.36.214.130:9200 -p 5601:5601 \
+docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.124.8:9200 -p 5601:5601 \
 -d kibana:7.4.2
 ### 初步检索
 1._cat  
@@ -110,9 +125,9 @@ post customer/external/1/_update
 
 { 
 
-    "name": "John Dewn", 
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "John Dewn", 
 
-    "age": 20 
+&nbsp;&nbsp;&nbsp;&nbsp;"age": 20 
 
 } 
 
@@ -124,13 +139,60 @@ delete /customer/
 
 6.bulk批量导入数据  
 
-elasticsearch官方
-
+elasticsearch官方数据地址：https://raw.githubusercontent.com/elastic/elasticsearch/master/docs/src/test/resources/accounts.json 
 语法格式 
 {"index": {"_id": "1"}} \
 {"name": "John Doe"}
 {"index": {"_id": "2"}}
 {"name": "John"}
+
+## searchAPI 
+ES支持两种请求方式
+
+1.通过REST request URI发送搜索参数（uri+检索参数） 
+
+2.通过REST request body来发送他们（uri请求） 
+
+queryDSL的查询结构
+{     
+&nbsp;&nbsp;&nbsp;&nbsp;QUERY_NAME:{  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARGUMENT:VALUE,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARGUMENT:VALUE, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+}  
+
+如果是针对某个字段，它的结构如下： 
+{     
+&nbsp;&nbsp;&nbsp;&nbsp;QUERY_ NAME:{  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIELD__NAME:{  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARGUMENT:VALUE,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARGUMENT:VALUE,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+}  
+
+## aggregations聚合 （执行聚合） 
+
+搜索address中包含mill的所有人的年龄分布以及平均年龄，但不显示这些人的详情 
+
+## 分词
+一个tokenizer（分词器）接受一个字符流，将值分给为独立的tokens，然后输出分词流 
+
+docker run -p 80:80 --name nginx \
+-v /Users/Java/mydata/nginx/html:/usr/share/nginx/html \
+-v /Users/Java/mydata/nginx/logs:/var/log/nginx \
+-v /Users/Java/mydata/nginx/conf/:/etc/nginx -d nginx:1.10 
+
+
+
+
 ## Dokcer安装RabbitMQ
 
 docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management 
@@ -156,3 +218,4 @@ fanout：实现发布订阅，广播模式，不关心路由件是什么
 topic：发布订阅模式，部分广播，绑定关系可以用通配符，#匹配0个或多个单词，*匹配一个单词  
 
 ## 认证中心（社交登录，Oauth2.0，单点登录）
+

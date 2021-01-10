@@ -17,5 +17,6 @@
         <module>store-ware</module>
         <module>store-product</module>
         <module>renren-generator</module>
+        <module>store-common</module>
     </modules>
 </project>

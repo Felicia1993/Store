@@ -13,6 +13,7 @@
         <module name="store-product" />
         <module name="member" />
         <module name="store-common" />
+        <module name="store" />
         <module name="store-ware" />
         <module name="store-essearch" />
         <module name="renren-generator" />
@@ -21,12 +22,13 @@
     <bytecodeTargetLevel>
       <module name="member" target="1.8" />
       <module name="renren-generator" target="1.8" />
+      <module name="store" target="1.5" />
       <module name="store-auth-server" target="1.5" />
       <module name="store-common" target="7" />
       <module name="store-coupon" target="1.8" />
       <module name="store-essearch" target="1.8" />
       <module name="store-member" target="1.8" />
-      <module name="store-order" target="1.5" />
+      <module name="store-order" target="1.8" />
       <module name="store-product" target="1.8" />
       <module name="store-search" target="1.5" />
       <module name="store-ware" target="1.8" />
@@ -39,6 +41,7 @@
       <module name="store-coupon" options="-parameters" />
       <module name="store-essearch" options="-parameters" />
       <module name="store-member" options="-parameters" />
+      <module name="store-order" options="-parameters" />
       <module name="store-product" options="-parameters" />
       <module name="store-ware" options="-parameters" />
     </option>

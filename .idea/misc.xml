@@ -5,7 +5,16 @@
       <list>
         <option value="$PROJECT_DIR$/store/store-search/pom.xml" />
         <option value="$PROJECT_DIR$/store-order/pom.xml" />
-        <option value="$PROJECT_DIR$/store-search/pom.xml" />
+        <option value="$PROJECT_DIR$/store-auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/store-essearch/pom.xml" />
+        <option value="$PROJECT_DIR$/store-product/pom.xml" />
+        <option value="$PROJECT_DIR$/coupon/pom.xml" />
+        <option value="$PROJECT_DIR$/member/pom.xml" />
+        <option value="$PROJECT_DIR$/store-ware/pom.xml" />
+        <option value="$PROJECT_DIR$/store-member/pom.xml" />
+        <option value="$PROJECT_DIR$/../renren-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/renren-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/store-common/pom.xml" />
       </list>
     </option>
   </component>

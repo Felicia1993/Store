@@ -14,264 +14,126 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6a31d1a-1281-4f7f-889e-c6ecf16aba75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/cache_contract.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/src/main/java/com/power/demo/cache/contract/CacheProviderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_contract/src/main/java/com/power/demo/cache/impl/LocalCacheProviderImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/leetcode/editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/DaemonDemo/Demo4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/ExecutorLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/Singleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/SingletonDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/Demo5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/BlockingQueueDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/condition/Demo9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/countdownlatch/TaskDisposeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/locksupport/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/semaphore/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/jucdemo/semaphore/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadInterruptdemo/Demo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo01.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo03.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo201.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threaddemo/Demo7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadgroupdemo/ThreadGroupDemo4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/AccountingSync.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/Demo5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/InterruptSleepThread3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/InterruptedThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/src/main/java/org/concurrent/demo/threadsafe/SynchronizedBlocked.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/coupondemo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/src/main/java/com/xdclass/xdclassshop/XdclassShopApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupondemo/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01资料/代码/security-spring-boot/security-spring-boot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day01资料/代码/security-spring-security/security-spring-security.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/distributed-security.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-discovery/distributed-security-discovery.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-gateway/distributed-security-gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-order/distributed-security-order.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security-uaa/distributed-security-uaa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/distributed-security/distributed-security.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day02资料/代码/security-spring-boot/security-spring-boot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/src/main/java/com/itheima/security/distributed/discovery/DiscoveryServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-discovery/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-gateway/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/src/main/java/com/itheima/security/distributed/order/OrderServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-order/src/main/resources/application.properities" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/src/main/java/com/itheima/security/distributed/uaa/UAAServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security-uaa/src/main/resources/application.properities" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distributed-security/distributed-security.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-admin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/leader-selector-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/src/main/java/zookeeper/configurecenter/ConfigCenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leader-selector-demo/src/main/java/zookeeper/configurecenter/LeaderSelectorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/test/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/java/com/mybatis/demo/test/TestJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/main/resources/mybatis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/src/test/java/com/mybatis/demo/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/redisLock.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/src/main/java/com/enjoylearning/demo/lock/RedisImproveLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisLock/src/main/java/com/enjoylearning/demo/lock/Subscribe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/rpcstudy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/consumer/Consumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/framework/Invocation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/framework/URL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/DispatcherServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/protocol/http/HttpServerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/Provider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/api/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/provider/impl/HelloServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/register/LocalRegister.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/main/java/org/rpcstudy/register/RemoteMapRegister.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpcstudy/src/test/java/org/rpcstudy/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seckill/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/src/client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/client/src/main/java/com/fpm/framework/client/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/hello-service-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/hello-service-api/src/main/java/com/fpm/framework/hello/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/NameService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/RpcAccessPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/ServiceLoadException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/ServiceSupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-api/src/main/java/com/rpm/framework/rpc/spi/Singleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/NettyRpcAccessPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/RequestIdSupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/DynamicStubFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/ServiceSub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/ServiceType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/StubFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/stubs/AbstractSub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/client/stubs/RpcRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/nameservice/LocalFileNameService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/nameservice/Metadata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/SerializeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/SerializeSupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/serialize/Serializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/server/RpcRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/server/ServiceProviderRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/InFlightRequests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/RequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/RequestHandlerRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/ResponseFuture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/Transport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/TransportClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/TransportServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Code.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/Header.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/command/ResponseHeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/CommandDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/CommandEncoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/NettyTransport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/java/com/fpm/framework/rpc/transport/netty/RequestInvocation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.NameService" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.RpcAccessPoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/resources/META-INFO.services/com.fpm.framework.rpc.client.StubFactory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/rpc-netty/src/main/rpc-netty.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-rpm-framework-demo/simple-rpm-framework-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/CouponAppApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/config/DruidConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/config/DubboConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/java/com/xdclass/couponapp/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/java/com/xdclass/plugins/AddLimitOffsetPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/java/com/xdclass/plugins/Generator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-app/src/test/resources/generatorConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/coupon-service-api/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/main/java/com/xdclass/xdclassshop/XdclassShopApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-shop/src/test/java/com/xdclass/xdclassshop/XdclassShopApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/config/DubboConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TCouponMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TCouponMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserCouponMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserCouponMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.java.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/mapper/TUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TCoupon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TCouponExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUser.java.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserCoupon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserCouponExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user/coupon-user/src/main/java/com/xdclass/userapp/model/TUserExample.java.1" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/utils/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/utils/PageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/utils/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/utils/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/utils/RRException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/store/common/xss/SQLFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/store-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/src/main/java/com/store/coupon/CouponApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-coupon/src/test/java/com/store/coupon/CouponApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/src/main/java/com/store/member/MemberApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-member/src/test/java/com/store/member/MemberApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/StoreProductApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/AttrAttrgroupRelationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/AttrController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/AttrGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/BrandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/CategoryBrandRelationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/CommentReplayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/ProductAttrValueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/SkuImagesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/controller/SkuInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/AttrAttrgroupRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/AttrDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/AttrGroupDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/BrandDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/CategoryBrandRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/CommentReplayDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/ProductAttrValueDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/SkuImagesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/dao/SkuInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/AttrAttrgroupRelationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/AttrEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/AttrGroupEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/BrandEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/CategoryBrandRelationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/CommentReplayEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/ProductAttrValueEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/SkuImagesEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/entity/SkuInfoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/AttrAttrgroupRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/AttrGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/AttrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/BrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/CategoryBrandRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/CommentReplayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/ProductAttrValueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/SkuImagesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/SkuInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/AttrAttrgroupRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/AttrGroupServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/AttrServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/CategoryBrandRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/CommentReplayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/ProductAttrValueServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/SkuImagesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/java/com/store/storeproduct/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/AttrAttrgroupRelationDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/AttrDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/AttrGroupDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/BrandDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/CategoryBrandRelationDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/CategoryDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/CommentReplayDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/ProductAttrValueDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/SkuImagesDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/main/resources/mapper/storeproduct/SkuInfoDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-product/src/test/java/com/store/storeproduct/StoreProductApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/src/main/java/com/store/storeware/StoreWareApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-ware/src/test/java/com/store/storeware/StoreWareApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-order/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,10 +170,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-product/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -319,72 +187,213 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.StoreOrderApplicationTests">
-    <configuration name="ThreadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.store.search.thread.ThreadTest" />
-      <module name="store-search" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.store.search.thread.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.store.storeproduct" />
+      <recent name="" />
+      <recent name="com.store.order" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store-product/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.StoreProductApplicationTests.contextLoads">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StoreOrderApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="store-search" />
+    <configuration name="StoreProductApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-product" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.store.order.*" />
+          <option name="PATTERN" value="com.store.storeproduct.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.store.order" />
-      <option name="MAIN_CLASS_NAME" value="com.store.order.StoreOrderApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StoreOrderApplicationTests.createExchange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="store-order" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.store.order.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.store.order" />
-      <option name="MAIN_CLASS_NAME" value="com.store.order.StoreOrderApplicationTests" />
-      <option name="METHOD_NAME" value="createExchange" />
+      <option name="PACKAGE_NAME" value="com.store.storeproduct" />
+      <option name="MAIN_CLASS_NAME" value="com.store.storeproduct.StoreProductApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreSearchApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-essearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.storesearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.storesearch" />
+      <option name="MAIN_CLASS_NAME" value="com.store.storesearch.StoreSearchApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreSearchApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-essearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.storesearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.storesearch" />
+      <option name="MAIN_CLASS_NAME" value="com.store.storesearch.StoreSearchApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreSearchApplicationTests.indexData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-essearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.storesearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.storesearch" />
+      <option name="MAIN_CLASS_NAME" value="com.store.storesearch.StoreSearchApplicationTests" />
+      <option name="METHOD_NAME" value="indexData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreSearchApplicationTests.searchData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-essearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.storesearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.storesearch" />
+      <option name="MAIN_CLASS_NAME" value="com.store.storesearch.StoreSearchApplicationTests" />
+      <option name="METHOD_NAME" value="searchData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="store" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="store" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-coupon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.store.coupon.CouponApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-member" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.store.member.MemberApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="renren-generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.store.storeproduct.StoreProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-essearch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.store.storesearch.StoreSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreWareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-ware" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.store.storeware.StoreWareApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StoreOrderApplicationTests" />
-        <item itemvalue="JUnit.StoreOrderApplicationTests.createExchange" />
-        <item itemvalue="Application.ThreadTest" />
+        <item itemvalue="JUnit.StoreProductApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.StoreSearchApplicationTests.searchData" />
+        <item itemvalue="JUnit.StoreSearchApplicationTests" />
+        <item itemvalue="JUnit.StoreSearchApplicationTests.indexData" />
+        <item itemvalue="JUnit.StoreSearchApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -400,7 +409,8 @@
       <workItem from="1609770216779" duration="156000" />
       <workItem from="1609770379242" duration="109000" />
       <workItem from="1609770606628" duration="1150000" />
-      <workItem from="1609771938115" duration="58000" />
+      <workItem from="1609771938115" duration="22485000" />
+      <workItem from="1610249201959" duration="3300000" />
     </task>
     <servers />
   </component>
@@ -423,72 +433,100 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1396" height="245" key="GridCell.Tab.0.bottom" timestamp="1609683769015">
+    <state x="354" y="135" key="#Inspections" timestamp="1609775326840">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609683769015" />
+    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1609775326840" />
+    <state x="405" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610164080515">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="405" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1610164080515" />
+    <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1610179284284">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1610179284284" />
+    <state x="490" y="326" width="460" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1610206545907">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="490" y="326" width="460" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1610206545907" />
+    <state x="466" y="327" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610204269075">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="466" y="327" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1610204269075" />
+    <state width="1396" height="502" key="GridCell.Tab.0.bottom" timestamp="1610264495888">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="502" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610264495888" />
     <state width="1396" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1609677799324" />
-    <state width="1396" height="245" key="GridCell.Tab.0.center" timestamp="1609683769014">
+    <state width="1396" height="502" key="GridCell.Tab.0.center" timestamp="1610264495886">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1609683769014" />
+    <state width="1396" height="502" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1610264495886" />
     <state width="1396" height="204" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1609677799323" />
-    <state width="1396" height="245" key="GridCell.Tab.0.left" timestamp="1609683769014">
+    <state width="1396" height="502" key="GridCell.Tab.0.left" timestamp="1610264495885">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1609683769014" />
+    <state width="1396" height="502" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1610264495885" />
     <state width="1396" height="204" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1609677799323" />
-    <state width="1396" height="245" key="GridCell.Tab.0.right" timestamp="1609683769015">
+    <state width="1396" height="502" key="GridCell.Tab.0.right" timestamp="1610264495887">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1609683769015" />
+    <state width="1396" height="502" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1610264495887" />
     <state width="1396" height="204" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1609677799324" />
-    <state width="1396" height="254" key="GridCell.Tab.1.bottom" timestamp="1609673342479">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1396" height="304" key="GridCell.Tab.1.bottom" timestamp="1610252889761">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610252889761" />
     <state width="1396" height="254" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1609673342479" />
-    <state width="1396" height="254" key="GridCell.Tab.1.center" timestamp="1609673342478">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1396" height="304" key="GridCell.Tab.1.center" timestamp="1610252889758">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1610252889758" />
     <state width="1396" height="254" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1609673342478" />
-    <state width="1396" height="254" key="GridCell.Tab.1.left" timestamp="1609673342478">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1396" height="304" key="GridCell.Tab.1.left" timestamp="1610252889757">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1610252889757" />
     <state width="1396" height="254" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1609673342478" />
-    <state width="1396" height="254" key="GridCell.Tab.1.right" timestamp="1609673342479">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1396" height="304" key="GridCell.Tab.1.right" timestamp="1610252889760">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1610252889760" />
     <state width="1396" height="254" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1609673342479" />
-    <state x="258" y="68" key="Maven.ArtifactSearchDialog" timestamp="1609770897301">
+    <state x="258" y="68" key="Maven.ArtifactSearchDialog" timestamp="1609776269977">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="258" y="68" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1609770897301" />
+    <state x="258" y="68" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1609776269977" />
     <state x="258" y="83" key="Maven.ArtifactSearchDialog/0.23.1440.797@0.23.1440.797" timestamp="1609676717216" />
-    <state x="127" y="125" key="NewModule_or_Project.wizard" timestamp="1609770452378">
+    <state x="127" y="125" key="NewModule_or_Project.wizard" timestamp="1610204417977">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="127" y="125" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1609770452378" />
+    <state x="127" y="125" key="NewModule_or_Project.wizard/0.0.1440.900@0.0.1440.900" timestamp="1610204417977" />
     <state x="425" y="159" key="RollbackChangesDialog" timestamp="1609771970724">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="425" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1609771970724" />
-    <state x="0" y="0" width="1440" height="797" key="SettingsEditor" timestamp="1609771996376">
+    <state x="335" y="23" width="1024" height="798" key="SettingsEditor" timestamp="1610264168904">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1609771996376" />
+    <state x="335" y="23" width="1024" height="798" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1610264168904" />
     <state x="0" y="23" width="1440" height="797" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1609673188066" />
-    <state x="418" y="205" width="604" height="490" key="find.popup" timestamp="1609769110976">
+    <state x="418" y="205" width="665" height="490" key="find.popup" timestamp="1610252964392">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="418" y="205" width="604" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1609769110976" />
-    <state x="88" y="69" key="new project wizard" timestamp="1609724051538">
+    <state x="418" y="205" width="665" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1610252964392" />
+    <state x="176" y="155" key="new project wizard" timestamp="1610205121331">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="88" y="69" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1609724051538" />
+    <state x="176" y="155" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1610205121331" />
     <state x="88" y="84" key="new project wizard/0.23.1440.797@0.23.1440.797" timestamp="1609672887227" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1609769487143">
+    <state x="419" y="233" key="refactoring.ChangeSignatureDialog" timestamp="1610249533547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1609769487143" />
+    <state x="419" y="233" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1610249533547" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1610180627767">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1610180627767" />
   </component>
 </project>

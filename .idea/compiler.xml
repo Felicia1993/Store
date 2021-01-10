@@ -6,13 +6,41 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="store-coupon" />
         <module name="store-order" />
-        <module name="store-search" />
+        <module name="store-auth-server" />
+        <module name="store-member" />
+        <module name="store-product" />
+        <module name="member" />
+        <module name="store-common" />
+        <module name="store-ware" />
+        <module name="store-essearch" />
+        <module name="renren-generator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="member" target="1.8" />
+      <module name="renren-generator" target="1.8" />
+      <module name="store-auth-server" target="1.5" />
+      <module name="store-common" target="7" />
+      <module name="store-coupon" target="1.8" />
+      <module name="store-essearch" target="1.8" />
+      <module name="store-member" target="1.8" />
       <module name="store-order" target="1.5" />
+      <module name="store-product" target="1.8" />
       <module name="store-search" target="1.5" />
+      <module name="store-ware" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="member" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+      <module name="store-coupon" options="-parameters" />
+      <module name="store-essearch" options="-parameters" />
+      <module name="store-member" options="-parameters" />
+      <module name="store-product" options="-parameters" />
+      <module name="store-ware" options="-parameters" />
+    </option>
   </component>
 </project>

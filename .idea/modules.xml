@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Store.iml" filepath="$PROJECT_DIR$/.idea/Store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-member/member.iml" filepath="$PROJECT_DIR$/store-member/member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/renren-generator/renren-generator.iml" filepath="$PROJECT_DIR$/renren-generator/renren-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/store.iml" filepath="$PROJECT_DIR$/.idea/store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-auth-server/store-auth-server.iml" filepath="$PROJECT_DIR$/store-auth-server/store-auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-common/store-common.iml" filepath="$PROJECT_DIR$/store-common/store-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-coupon/store-coupon.iml" filepath="$PROJECT_DIR$/store-coupon/store-coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-essearch/store-essearch.iml" filepath="$PROJECT_DIR$/store-essearch/store-essearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/store-order/store-order.iml" filepath="$PROJECT_DIR$/store-order/store-order.iml" />
-      <module fileurl="file://$PROJECT_DIR$/store-search/store-search.iml" filepath="$PROJECT_DIR$/store-search/store-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-product/store-product.iml" filepath="$PROJECT_DIR$/store-product/store-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-ware/store-ware.iml" filepath="$PROJECT_DIR$/store-ware/store-ware.iml" />
     </modules>
   </component>
 </project>

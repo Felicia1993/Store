@@ -19,7 +19,28 @@
 
 2) 每个服务，包名com.store.xxx(product/order/ware/coupon/memeber) 
 
-3) 模块名：store-coupon
+3) 模块名：store-coupon 
+
+springCloudAlibaba的优势 
+
+SpringCloudAlibaba-Nacos:注册中心（服务发现/注册） 
+
+SpringCloudAlibaba-Nacos:配置中心（动态配置管理） 
+
+SpringCloud-Ribbon:负载均衡 
+
+SpringCloud-Feign：声明式HTTP客户端（调用远端服务） 
+
+SpringCloudAlibaba-Sentinel:服务容错（限流、降级、熔断） 
+
+SpringCloud-Gateway：API 网关（webflux编程模式） 
+
+SpringCloud-Sleuth：调用链监控 
+
+SpringCloudAlibaba-Seata：原分布式事务解决方案 
+
+## Nacos注册中心
+
 
 ## ElasticSearch
 概念：1.索引-->datablase 2.类型-->table 3.文档-->数据行 4.属性-->mysql列 

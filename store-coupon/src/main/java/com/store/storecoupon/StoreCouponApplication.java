@@ -17,6 +17,21 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @RefreshScope:动态获取并刷新配置
  * @Value("${配置项的名}")：获取到配置
  * 如果配置中心和当前应用的配置文件中，都配置了相同的项，有限使用配置中心的配置
+ * 2.细节
+ *  1.命名空间 环境隔离
+ *      默认public（保留空间），默认新增的所有配置都在public空间
+ *      1.开发、测试、生产：利用命名空间做隔离
+ *      注意：在bootstrap.properties里配置上，需要使用的那个命名空间下的配置
+ *      2.基于每个微服务之间，互相隔离配置，每个微服务都创建自己的命名空间，只加载自己命名空间下的所有配置
+ *  2.配置集 一组相关或不相关的配置集合
+ *  3.配置集ID 类似文件名ID
+ *  Data ID：
+ *  4.配置分组
+ *  默认所有的配置集都属于default_group：
+ *  1111、618、1212
+ *  每个微服务创建自己的命名空间，使用配置分组区分环境，dev test prod
+ *  3.同时加载多个配置集
+ *  
  */
 @MapperScan("com.store.storecoupon.dao")
 @SpringBootApplication

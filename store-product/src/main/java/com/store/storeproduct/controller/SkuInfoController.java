@@ -25,7 +25,7 @@ import com.store.common.utils.R;
  * @date 2021-01-09 23:09:10
  */
 @RestController
-@RequestMapping("store-product/skuinfo")
+@RequestMapping("storeproduct/skuinfo")
 public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;

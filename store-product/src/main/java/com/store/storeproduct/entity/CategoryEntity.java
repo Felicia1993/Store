@@ -5,6 +5,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 /**
@@ -37,24 +40,26 @@ public class CategoryEntity implements Serializable {
 	 */
 	private Integer catLevel;
 	/**
-	 * ÊÇ·ñÏÔÊ¾[0-²»ÏÔÊ¾£¬1ÏÔÊ¾]
+	 *
 	 */
 	private Integer showStatus;
 	/**
-	 * ÅÅÐò
+	 * 排序
 	 */
 	private Integer sort;
 	/**
-	 * Í¼±êµØÖ·
+	 * 图标
 	 */
 	private String icon;
 	/**
-	 * ¼ÆÁ¿µ¥Î»
+	 * 计量单位
 	 */
 	private String productUnit;
 	/**
-	 * ÉÌÆ·ÊýÁ¿
+	 * 商品数量
 	 */
 	private Integer productCount;
 
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private List<CategoryEntity> children;
 }

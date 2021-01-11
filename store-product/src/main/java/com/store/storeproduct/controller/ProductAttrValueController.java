@@ -25,7 +25,7 @@ import com.store.common.utils.R;
  * @date 2021-01-09 23:09:10
  */
 @RestController
-@RequestMapping("store-product/productattrvalue")
+@RequestMapping("storeproduct/productattrvalue")
 public class ProductAttrValueController {
     @Autowired
     private ProductAttrValueService productAttrValueService;

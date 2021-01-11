@@ -27,7 +27,7 @@ import com.store.common.utils.R;
  * @date 2021-01-09 23:09:10
  */
 @RestController
-@RequestMapping("store-product/category")
+@RequestMapping("storeproduct/category")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;

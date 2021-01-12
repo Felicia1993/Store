@@ -35,6 +35,21 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     //1）升级 lettuce客户端 2）使用Jedis
 
     /**
+     * 缓存击穿：
+     * 高频热点请求失效
+     * 解决方案：
+     * 加锁，大量并发只让1人去查，其他人等待，查到以后释放锁，其他人获取到锁，先查缓存
+     *
+     * 缓存穿透：
+     * 查询不存在的数据
+     * 解决方案：
+     * null结果缓存，加过期时间
+     *
+     * 缓存雪崩：
+     * 大面积key集中过期
+     */
+
+    /**
      * redisTemplate:
      * lettuce、jedis操作redis的底层。Spring对前两者再次封装成redisTemplate
      *
@@ -46,6 +61,13 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     public Long[] findCatelogPath(Long catelogId) {
 
         List<Long> paths = new ArrayList<>();
+        //只要是同一把锁，就能锁住需要这个锁的所有线程
+        /**
+         * springboot所有的组件在容器中都是单例的
+         */
+        synchronized (this) {
+
+        }
         List<Long> parentPath = findParentPath(catelogId, paths);
         Collections.reverse(parentPath);
 
@@ -61,4 +83,5 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         }
         return paths;
     }
+
 }

@@ -1,8 +1,11 @@
 package com.store.storeproduct.service.impl;
 
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -65,13 +68,55 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         /**
          * springboot所有的组件在容器中都是单例的
          */
-        synchronized (this) {
+        RedisTemplate<String, Object> redisTemplate = null;
+        String s = UUID.randomUUID().toString();
+        Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", s, 300, TimeUnit.SECONDS);
+        if (lock) {
+            //设置锁的过期时间
+            redisTemplate.expire("lock",30, TimeUnit.SECONDS);
 
+            //删除锁 保证原子操作，结合lua脚本
+            /*Object lockValue = redisTemplate.opsForValue().get("lock");
+            if (lockValue.equals(s)) {
+                redisTemplate.delete("lock");//删除锁
+            }*/
+            /**
+             * if redis.call('get', KEYS[1]) == ARGV[1]
+             *     then
+             *  -- 执行删除操作
+             *         return redis.call('del', KEYS[1])
+             *     else
+             *  -- 不成功，返回0
+             *         return 0
+             * end
+             */
+
+            //锁的自动续机
+            try{
+                //加锁成功
+                List<Long> parentPath = findParentPath(catelogId, paths);
+                Collections.reverse(parentPath);
+                Long[] longs = parentPath.toArray(new Long[parentPath.size()]);
+                return (Long[]) longs;
+            } finally {
+                //原子性删除锁
+                String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
+                redisTemplate.execute(new DefaultRedisScript<Long>(script), Arrays.asList("lock",s));
+
+            }
+        } else {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //加锁失败。。。重试
+            return findCatelogPath(catelogId);
         }
-        List<Long> parentPath = findParentPath(catelogId, paths);
-        Collections.reverse(parentPath);
 
-        return (Long[]) parentPath.toArray(new Long[parentPath.size()]);
+
+
+
     }
     //225
     private List<Long> findParentPath(Long catelogId,List<Long> paths) {

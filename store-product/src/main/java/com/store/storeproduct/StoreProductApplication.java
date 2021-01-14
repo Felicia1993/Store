@@ -22,6 +22,18 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * 1.引入data-redis-starter
  * 2.简单配置redis的host等信息
  * 3.使用springboot自动配置好的StringRedisTemplate来操作redis
+ *
+ *
+ * 整合redission
+ * 1.引入依赖
+ * <dependency>
+ *             <groupId>org.redisson</groupId>
+ *             <artifactId>redisson</artifactId>
+ *             <version>3.12.0</version>
+ *         </dependency>
+ * 2.配置redission
+ *
+ *
  */
 
 @MapperScan("com.store.storeproduct.dao")

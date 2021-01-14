@@ -13,7 +13,7 @@ spring:
     application:
       name: store-product
   redis:
-    host: 127.0.0.1
+    host: 192.168.124.8
     port: 6379
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml

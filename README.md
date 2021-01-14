@@ -40,7 +40,9 @@ SpringCloud-Sleuth：调用链监控
 SpringCloudAlibaba-Seata：原分布式事务解决方案 
 
 ## Nacos注册中心
+单机模式启动的命令：sh startup.sh -m standalone 
 
+本地单机模式要改配置，具体
 
 ## ElasticSearch
 概念：1.索引-->datablase 2.类型-->table 3.文档-->数据行 4.属性-->mysql列 

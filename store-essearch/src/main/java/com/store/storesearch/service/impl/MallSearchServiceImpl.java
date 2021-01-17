@@ -14,6 +14,9 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.NestedQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.RangeQueryBuilder;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.bucket.nested.NestedAggregationBuilder;
+import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.sort.SortOrder;
@@ -151,6 +154,27 @@ public class MallSearchServiceImpl implements MallSearchService {
         /**
          * 聚合分析
          */
+        //1.品牌聚合
+        TermsAggregationBuilder brand_agg = AggregationBuilders.terms("brand_agg");
+        brand_agg.field("brandId").size(50);
+        brand_agg.subAggregation(AggregationBuilders.terms("brand_name_agg").field("brandName").size(10));
+        brand_agg.subAggregation(AggregationBuilders.terms("brand_img_agg").field("brandImg").size(10));
+        builder.aggregation(brand_agg);
+        //2.分类聚合 catelog_agg
+        TermsAggregationBuilder catelog_agg = AggregationBuilders.terms("catelog_agg").field("catelogId").size(20);
+        catelog_agg.subAggregation(AggregationBuilders.terms("catelog_name_agg").field("catelogName").size(10));
+        builder.aggregation(catelog_agg);
+        //3.属性聚合
+        NestedAggregationBuilder attr_agg = AggregationBuilders.nested("attr_agg", "attrs");
+        //聚合出当前所有的attrId
+        TermsAggregationBuilder attr_id_agg = AggregationBuilders.terms("attr_id_agg").field("attrs.attrId");
+        //聚合分析当前attr_id对应的名字
+        attr_id_agg.subAggregation(AggregationBuilders.terms("attr_name_agg").field("attrs.attrName").size(1));
+        attr_id_agg.subAggregation(AggregationBuilders.terms("attr_value_agg").field("attrs.attrValue").size(50));
+        attr_agg.subAggregation(attr_id_agg);
+        builder.aggregation(attr_agg);
+
+
         String s = builder.toString();
         System.out.println("构建的dsl语句"+s);
         SearchRequest searchRequest = new SearchRequest(new String[]{EsConstant.PRODUCT_INDEX}, builder);

@@ -25,5 +25,5 @@ public class SearchParam {
     private String skuPrice;
     private List<Long> brandId;//按照品牌进行筛选
     private List<String> attrs;//按照属性进行筛选
-    private Integer pageNum;//页码
+    private Integer pageNum = 1;//页码
 }

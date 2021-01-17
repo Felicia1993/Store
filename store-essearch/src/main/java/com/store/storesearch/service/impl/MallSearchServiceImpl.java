@@ -2,6 +2,7 @@ package com.store.storesearch.service.impl;
 
 import com.store.common.utils.Query;
 import com.store.storesearch.config.ElasticSearchConfig;
+import com.store.storesearch.constant.EsConstant;
 import com.store.storesearch.service.MallSearchService;
 import com.store.storesearch.vo.SearchParam;
 import com.store.storesearch.vo.SearchResult;
@@ -14,10 +15,13 @@ import org.elasticsearch.index.query.NestedQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.swing.*;
 import java.io.IOException;
 
 @Service
@@ -38,7 +42,7 @@ public class MallSearchServiceImpl implements MallSearchService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return result;
     }
 
     /**
@@ -124,6 +128,31 @@ public class MallSearchServiceImpl implements MallSearchService {
         /**
          * 排序，分页，高亮，聚合分析
          */
+        //2.1排序
+        if (!StringUtils.isEmpty(searchParam.getSort())) {
+            String sort = searchParam.getSort();
+            String[] s = sort.split("_");
+            SortOrder order = s[1].equalsIgnoreCase("asc") ? SortOrder.ASC : SortOrder.DESC;
+            builder.sort(s[0], order);
+        }
+        //2.2分页
+        //from = (pageNum-1) * pageSize
+        builder.from(((searchParam.getPageNum()-1) * EsConstant.PRODUCT_PAGESIZE));
+        builder.size(EsConstant.PRODUCT_PAGESIZE);
+
+        //2.3高亮
+        if (!StringUtils.isEmpty(searchParam.getKeyword())) {
+            HighlightBuilder highlightBuilder = new HighlightBuilder();
+            highlightBuilder.field("skuTitle");
+            highlightBuilder.preTags("<b style='color:red'>");
+            highlightBuilder.postTags("</b>");
+            builder.highlighter(highlightBuilder);
+        }
+        /**
+         * 聚合分析
+         */
+        String s = builder.toString();
+        System.out.println("构建的dsl语句"+s);
         SearchRequest searchRequest = new SearchRequest(new String[]{EsConstant.PRODUCT_INDEX}, builder);
         return searchRequest;
     }

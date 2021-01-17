@@ -1,13 +1,13 @@
 package com.store.storesearch.vo;
 
-import com.store.common.es.skuEsModel;
+import com.store.storesearch.model.SkuEsModel;
 import lombok.Data;
 
 import java.util.List;
 @Data
 public class SearchResult {
     //查询到的所有商品信息
-    private List<skuEsModel> products;
+    private List<SkuEsModel> products;
     //以下是所有分页数据
     private Integer pageNum;//当前页码
     private Long total;//总记录数

@@ -1,6 +1,6 @@
 package com.store.storesearch.service.impl;
 
-import com.store.common.utils.Query;
+import com.store.common.es.SkuEsModel;
 import com.store.storesearch.config.ElasticSearchConfig;
 import com.store.storesearch.constant.EsConstant;
 import com.store.storesearch.service.MallSearchService;
@@ -14,6 +14,8 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.NestedQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.RangeQueryBuilder;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.nested.NestedAggregationBuilder;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
@@ -23,9 +25,9 @@ import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-
-import javax.swing.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class MallSearchServiceImpl implements MallSearchService {
@@ -54,6 +56,28 @@ public class MallSearchServiceImpl implements MallSearchService {
      * @return
      */
     private SearchResult buildSearchResult(SearchResponse response) {
+        SearchResult result = new SearchResult();
+        SearchHits hits = response.getHits();
+        List<SkuEsModel> esModels = new ArrayList<>();
+        if (hits.getHits() != null && hits.getHits().length > 0) {
+            for(SearchHit hit:hits.getHits()) {
+                String sourceAsString = hit.getSourceAsString();
+                SkuEsModel esModel = new SkuEsModel();
+                esModels.add(esModel);
+            }
+        }
+        //返回的所有查询到的商品
+        result.setProducts(esModels);
+        //当前所有商品设计的所有属性信息
+        result.setCatalogs();
+        //当前素有商品设计的所有品牌信息
+        result.setBrands();
+        //======从聚合信息中获取到=====
+        result.setPageNum();
+        Long total = hits.getTotalHits().value;
+        result.setTotal(total);
+        int totalPages = (int) (total%EsConstant.PRODUCT_PAGESIZE == 0 ? total/EsConstant.PRODUCT_PAGESIZE : (total/EsConstant.PRODUCT_PAGESIZE + 1));
+        result.setTotalPages(totalPages);
         return null;
     }
 

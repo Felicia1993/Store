@@ -6,7 +6,7 @@ import sun.rmi.runtime.Log;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class skuEsModel {
+public class SkuEsModel {
     private Long skuId;
     private Long spuId;
     private String skuTitle;

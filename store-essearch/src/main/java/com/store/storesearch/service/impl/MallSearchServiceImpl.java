@@ -1,6 +1,6 @@
 package com.store.storesearch.service.impl;
 
-import com.store.common.es.SkuEsModel;
+import com.store.common.to.es.SkuEsModel;
 import com.store.storesearch.config.ElasticSearchConfig;
 import com.store.storesearch.constant.EsConstant;
 import com.store.storesearch.service.MallSearchService;
@@ -67,13 +67,13 @@ public class MallSearchServiceImpl implements MallSearchService {
             }
         }
         //返回的所有查询到的商品
-        result.setProducts(esModels);
+        /*result.setProducts(esModels);
         //当前所有商品设计的所有属性信息
         result.setCatalogs();
         //当前素有商品设计的所有品牌信息
         result.setBrands();
         //======从聚合信息中获取到=====
-        result.setPageNum();
+        result.setPageNum();*/
         Long total = hits.getTotalHits().value;
         result.setTotal(total);
         int totalPages = (int) (total%EsConstant.PRODUCT_PAGESIZE == 0 ? total/EsConstant.PRODUCT_PAGESIZE : (total/EsConstant.PRODUCT_PAGESIZE + 1));

@@ -1,6 +1,7 @@
 package com.store.storesearch.vo;
 
-import com.store.storesearch.model.SkuEsModel;
+
+import com.store.common.to.es.SkuEsModel;
 import lombok.Data;
 
 import java.util.List;

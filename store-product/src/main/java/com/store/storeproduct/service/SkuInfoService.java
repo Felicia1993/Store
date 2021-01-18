@@ -3,6 +3,7 @@ package com.store.storeproduct.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.store.common.utils.PageUtils;
 import com.store.storeproduct.entity.SkuInfoEntity;
+import com.store.storeproduct.entity.SpuInfoEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -17,5 +18,7 @@ import java.util.Map;
 public interface SkuInfoService extends IService<SkuInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    List<SkuInfoEntity>  getSkusBySpuId(Long spuId);
 }
 

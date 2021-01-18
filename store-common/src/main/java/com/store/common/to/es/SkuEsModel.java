@@ -1,11 +1,11 @@
-package com.store.common.es;
+package com.store.common.to.es;
 
-import jdk.internal.util.xml.impl.Attrs;
-import sun.rmi.runtime.Log;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Data
 public class SkuEsModel {
     private Long skuId;
     private Long spuId;
@@ -13,10 +13,18 @@ public class SkuEsModel {
     private BigDecimal skuPrice;
     private String skuImg;
     private Long saleCount;
-    private Boolean hasStock;
+    private Integer hasStock;
     private Long brandId;
     private String brandName;
     private String brandImg;
+    private Long catalogId;
+    private Long hotScore;
     private String catalogName;
     private List<Attrs> attrs;
+    @Data
+    public static class Attrs{
+        private Long attrId;
+        private String attrName;
+        private String attrValue;
+    }
 }

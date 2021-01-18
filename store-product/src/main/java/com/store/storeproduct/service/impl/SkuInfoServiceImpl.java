@@ -1,6 +1,7 @@
 package com.store.storeproduct.service.impl;
 
 import com.store.storeproduct.entity.ProductAttrValueEntity;
+import com.store.storeproduct.entity.SpuInfoEntity;
 import com.store.storeproduct.service.AttrService;
 import com.store.storeproduct.service.ProductAttrValueService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,11 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
         );
 
         return new PageUtils(page);
+    }
+    @Override
+    public List<SkuInfoEntity> getSkusBySpuId(Long spuId) {
+        List<SkuInfoEntity> list = this.list(new QueryWrapper<SkuInfoEntity>().eq("spu_id",spuId));
+        return list;
     }
 
 }

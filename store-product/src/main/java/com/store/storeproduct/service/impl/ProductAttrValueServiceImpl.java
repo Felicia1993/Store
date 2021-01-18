@@ -34,5 +34,10 @@ public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao
         List<ProductAttrValueEntity> entities = this.baseMapper.selectList(new QueryWrapper<ProductAttrValueEntity>().eq("spu_id", spuId));
         return entities;
     }
+    @Override
+    public List<Long> selectSearchAttrIds(List<Object> attrIds){
+        //SELECT attr_id FROM store_pms.pms_attr where attr_id in() and search_type=1;
+        return baseMapper.selectSearchAttrIds(attrIds);
+    }
 
 }

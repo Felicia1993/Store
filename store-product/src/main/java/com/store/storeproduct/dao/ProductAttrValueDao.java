@@ -3,6 +3,9 @@ package com.store.storeproduct.dao;
 import com.store.storeproduct.entity.ProductAttrValueEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * spuÊôÐÔÖµ
@@ -13,5 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface ProductAttrValueDao extends BaseMapper<ProductAttrValueEntity> {
-	
+
+    List<Long>  selectSearchAttrIds(@Param("attrIds") List<Object> attrIds);
 }

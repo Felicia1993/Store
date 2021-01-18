@@ -1,9 +1,11 @@
 package com.store.storeproduct.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.store.common.to.es.SkuEsModel;
 import com.store.common.utils.PageUtils;
 import com.store.storeproduct.entity.SpuInfoEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +18,11 @@ import java.util.Map;
 public interface SpuInfoService extends IService<SpuInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 商品上架
+     * @param spuId
+     */
+    List<SkuEsModel> up(Long spuId);
 }
 

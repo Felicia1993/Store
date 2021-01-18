@@ -1,14 +1,12 @@
 package com.store.storeproduct.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+import com.store.common.to.es.SkuEsModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.store.storeproduct.entity.SpuInfoEntity;
 import com.store.storeproduct.service.SpuInfoService;
@@ -29,6 +27,15 @@ import com.store.common.utils.R;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
+
+    /**
+     * 商品上架
+     */
+    @PostMapping("/{spuId}/up")
+    public R spuUp(@PathVariable("spuId") Long spuId) {
+        List<SkuEsModel> up = spuInfoService.up(spuId);
+        return R.ok().put("data",up);
+    }
 
     /**
      * 列表

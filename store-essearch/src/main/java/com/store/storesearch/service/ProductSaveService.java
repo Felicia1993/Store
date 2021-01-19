@@ -7,5 +7,5 @@ import java.util.List;
 @Service
 public interface ProductSaveService {
 
-    void productStatusUp(List<SkuEsModel> skuEsModels);
+    boolean productStatusUp(List<SkuEsModel> skuEsModels);
 }

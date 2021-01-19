@@ -1,9 +1,11 @@
 package com.store.storeproduct.service.impl;
 
+import com.store.common.constant.ProductConstant;
 import com.store.common.to.SkuHasStockVo;
 import com.store.common.to.es.SkuEsModel;
 import com.store.common.utils.R;
 import com.store.storeproduct.entity.*;
+import com.store.storeproduct.feign.SearchFeignService;
 import com.store.storeproduct.feign.WareFeignService;
 import com.store.storeproduct.service.*;
 import org.springframework.beans.BeanUtils;
@@ -34,6 +36,8 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     ProductAttrValueService productAttrValueService;
     @Autowired
     WareFeignService feignService;
+    @Autowired
+    SearchFeignService searchFeignService;
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<SpuInfoEntity> page = this.page(
@@ -114,6 +118,16 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
             return skuEsModel;
         }).collect(Collectors.toList());
+
+        //todo 5.将数据发送给es进行保存，store-essearch
+        R r = searchFeignService.productStatusUp(upProducts);
+        if (r.getCode() == 0) {
+            //todo 6.修改当前spu的状态
+            baseMapper.updateSpuStatus(spuId, ProductConstant.StatusEnum.SPU_UP.getCode());
+        } else {
+            //远程调用失败
+            //todo 7 接口幂等性：重试机制
+        }
         return upProducts;
 
     }

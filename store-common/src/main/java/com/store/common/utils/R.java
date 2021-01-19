@@ -60,4 +60,8 @@ public class R<T> extends HashMap<String, Object> {
         super.put(key, value);
         return this;
     }
+
+    public int getCode() {
+        return 0;
+    }
 }

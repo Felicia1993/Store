@@ -27,7 +27,7 @@ public class ProductSaveServiceImpl implements ProductSaveService {
     @Autowired
     RestHighLevelClient restHighLevelClient;
     @Override
-    public void productStatusUp(List<SkuEsModel> skuEsModels){
+    public boolean productStatusUp(List<SkuEsModel> skuEsModels){
         //1.给es建立索引,建立好映射关系
         //2.给es中保存数据
         BulkRequest bulkRequest = new BulkRequest();
@@ -46,8 +46,10 @@ public class ProductSaveServiceImpl implements ProductSaveService {
                 return item.getId();
             }).collect(Collectors.toList());
             log.error("商品上架错误{}", (Throwable) collect);
+            return b;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return false;
     }
 }

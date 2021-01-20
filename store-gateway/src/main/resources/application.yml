@@ -16,3 +16,7 @@ spring:
             - Path=/api/storeproduct/**
           filters:
             - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: store-auth-server-route
+          uri: lb://store-auth-server
+          predicates:
+            - Path=auth.store.com

@@ -1,6 +1,7 @@
 package com.store.order;
 
 import lombok.extern.slf4j.Slf4j;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,9 +24,9 @@ public class StoreOrderApplicationTests {
      *  使用AmqpAdmin
      *  2.如何收发消息
      */
-    @Autowired
+
     AmqpAdmin amqpAdmin;
-    @Autowired
+
     RabbitTemplate rabbitTemplate;
     Logger logger = LoggerFactory.getLogger(StoreOrderApplicationTests.class);
     @Test

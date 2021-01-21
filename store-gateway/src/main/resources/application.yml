@@ -20,3 +20,7 @@ spring:
           uri: lb://store-auth-server
           predicates:
             - Path=auth.store.com
+        - id: store-cart
+          uri: lb://store-cart
+          predicates:
+            - Path=/api/cart/

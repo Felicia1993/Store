@@ -12,6 +12,26 @@
         <result property="icon" column="icon"/>
         <result property="catelogId" column="catelog_id"/>
     </resultMap>
-
-
+    <!-- 只要有嵌套属性，就要封装自定义结果集-->
+    <resultMap id="" type="com.store.storeproduct.vo.SpuItemAttrGroupVo">
+        <result property="groupName" column="attr_group_name"></result>
+        <collection property="attrs" ofType="com.store.storeproduct.vo.Attr">
+            <result column="attr_name" property="attrName"></result>
+            <result column="attr_value" property="attrValue"></result>
+        </collection>
+    </resultMap>
+    <select id="getAttrgetAttrGroupWithAttrsBySpuId" resultMap="SpuItemAttrGroupVo">
+        select  from
+            pav.`spu_id`,
+            ag.`attr_group_name`,
+            ag.attr_group_id,
+            aar.attr_id,
+            attr.attr_name,
+            pav.attr_value
+        from `pms_attr_group` ag
+        left join `pms_attr_attrgroup_relation` arr on arr.attr_group_id=ag.attr_group_id
+        left join `pms_attr attr` on attr.attr_id=aar.attr_id
+        left join `pms_product_attr_value` pav on pav.attr_id = attr.attr_id
+        where ag.category_id=225 and pav.spu_id=13
+    </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.store.storemember.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.store.common.utils.PageUtils;
+import com.store.common.vo.SocialUser;
 import com.store.storemember.entity.MemberEntity;
 
 import java.util.Map;
@@ -16,5 +17,7 @@ import java.util.Map;
 public interface MemberService extends IService<MemberEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    MemberEntity login(SocialUser vo);
 }
 

@@ -3,6 +3,8 @@ package com.store.storemember.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.store.common.exception.BizCodeEnum;
+import com.store.common.vo.SocialUser;
 import com.store.storemember.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +42,16 @@ public class MemberController {
         R membercoupons = couponFeignService.membercoupons();
 
         return R.ok().put("member", memberEntity).put("coupons", membercoupons.get("coupons"));
+    }
+
+    public R oauthlogin(@RequestBody SocialUser vo) {
+        MemberEntity memberEntity = memberService.login(vo);
+        if (memberEntity != null) {
+            //1.登录成功处理
+            return R.ok();
+        } else {
+            return R.error(BizCodeEnum.LOGINACCT_PASSWORD_INVAILD_EXCEPTION.getCode(), BizCodeEnum.LOGINACCT_PASSWORD_INVAILD_EXCEPTION.getMsg());
+        }
     }
 
     /**

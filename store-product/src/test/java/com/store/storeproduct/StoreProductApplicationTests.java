@@ -1,10 +1,12 @@
 package com.store.storeproduct;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.store.storeproduct.dao.AttrGroupDao;
 import com.store.storeproduct.entity.BrandEntity;
 import com.store.storeproduct.service.BrandService;
 
 import com.store.storeproduct.service.CategoryService;
+import com.store.storeproduct.vo.SpuItemAttrGroupVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,9 +31,17 @@ public class StoreProductApplicationTests {
     CategoryService categoryService;
     @Autowired
     StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    AttrGroupDao attrGroupDao;
 
     @Autowired
     RedissonClient client;
+
+    @Test
+    public void test() {
+        List<SpuItemAttrGroupVo> attrgetAttrGroupWithAttrsBySpuId = attrGroupDao.getAttrgetAttrGroupWithAttrsBySpuId(13L, 225L);
+        System.out.println(attrgetAttrGroupWithAttrsBySpuId);
+    }
     @Test
     public void testStringRedisTemplate() {
         //hello world

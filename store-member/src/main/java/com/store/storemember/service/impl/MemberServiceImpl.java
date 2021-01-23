@@ -1,5 +1,6 @@
 package com.store.storemember.service.impl;
 
+import com.store.common.vo.SocialUser;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -24,6 +25,13 @@ public class MemberServiceImpl extends ServiceImpl<MemberDao, MemberEntity> impl
         );
 
         return new PageUtils(page);
+    }
+    @Override
+    public MemberEntity login(SocialUser socialUser) {
+        //登录和注册合并逻辑
+        socialUser.getUid();
+        MemberEntity memberEntity = new MemberEntity();
+        return memberEntity;
     }
 
 }

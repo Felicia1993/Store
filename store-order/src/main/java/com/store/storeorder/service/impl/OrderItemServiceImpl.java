@@ -8,6 +8,8 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -51,6 +53,24 @@ public class OrderItemServiceImpl extends ServiceImpl<OrderItemDao, OrderItemEnt
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //channel内容通道内自增的
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        System.out.println(deliveryTag);
+        //签收货物，非批量模式
+        try {
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            //网络中断
+            //long var1, boolean var3, boolean var4 true重新入队，false丢弃
+            try {
+                channel.basicNack(deliveryTag,false,true);//可以批量
+                //long var1, boolean var3
+                channel.basicReject(deliveryTag, false);//不可批量
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
             e.printStackTrace();
         }
         System.out.println("接受到的消息。。。" + message + "====》内容：" +content);

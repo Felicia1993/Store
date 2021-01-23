@@ -1,5 +1,8 @@
 package com.store.order;
 
+import com.store.storeorder.StoreOrderApplication;
+import com.store.storeorder.entity.OrderEntity;
+import com.store.storeorder.entity.OrderReturnReasonEntity;
 import lombok.extern.slf4j.Slf4j;
 
 import org.junit.Test;
@@ -15,9 +18,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+import java.util.UUID;
+
 @Slf4j
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = StoreOrderApplication.class)
 public class StoreOrderApplicationTests {
     /**
      * 1.如何创建Exchange[hello-java-exchange] queue binding
@@ -26,9 +32,28 @@ public class StoreOrderApplicationTests {
      */
 
     AmqpAdmin amqpAdmin;
-
+    @Autowired
     RabbitTemplate rabbitTemplate;
     Logger logger = LoggerFactory.getLogger(StoreOrderApplicationTests.class);
+    @Test
+    public void sendMessageTest() {
+        for(int i = 0; i < 10; i++) {
+            if (i%2==0) {
+                OrderReturnReasonEntity orderReturnReasonEntity  = new OrderReturnReasonEntity();
+                orderReturnReasonEntity.setId(1L);
+                orderReturnReasonEntity.setCreateTime(new Date());
+                orderReturnReasonEntity.setName("哈哈");
+                //发送消息,如果发送的消息是个对象，会使用序列化机制，将对象写出去，对象必须实现serialize
+                String msg = "Hello World!";
+                rabbitTemplate.convertAndSend("hello.java.exchange", "hello.java", orderReturnReasonEntity);
+                logger.info("消息发送完成[{}]", orderReturnReasonEntity);
+            } else {
+                OrderEntity orderEntity = new OrderEntity();
+                orderEntity.setOrderSn(UUID.randomUUID().toString());
+                rabbitTemplate.convertAndSend("hello.java.exchange","hello.java", orderEntity);
+            }
+        }
+    }
     @Test
     public void sendMessage(){
         //发送消息,如果发送的消息是个对象，会使用序列化机制，将对象写出去，对象必须实现serialize

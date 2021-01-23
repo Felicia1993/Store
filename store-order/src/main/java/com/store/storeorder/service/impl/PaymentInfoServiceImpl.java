@@ -15,6 +15,7 @@ import com.store.storeorder.service.PaymentInfoService;
 
 @Service("paymentInfoService")
 public class PaymentInfoServiceImpl extends ServiceImpl<PaymentInfoDao, PaymentInfoEntity> implements PaymentInfoService {
+    @Override
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<PaymentInfoEntity> page = this.page(
                 new Query<PaymentInfoEntity>().getPage(params),

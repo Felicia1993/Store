@@ -1,2 +1,5 @@
-package com.store.storecart.config;public class StoreSessionConfig {
+package com.store.storecart.config;
+
+public class StoreSessionConfig {
+
 }

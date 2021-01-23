@@ -1,2 +1,5 @@
-package com.store.storecart.service.impl;public class CartService {
+package com.store.storecart.service;
+
+public interface CartService {
+
 }

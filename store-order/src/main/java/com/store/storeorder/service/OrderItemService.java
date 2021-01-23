@@ -1,8 +1,12 @@
 package com.store.storeorder.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.rabbitmq.client.Channel;
 import com.store.common.utils.PageUtils;
 import com.store.storeorder.entity.OrderItemEntity;
+import com.store.storeorder.entity.OrderReturnReasonEntity;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 
 import java.util.Map;
 
@@ -16,5 +20,6 @@ import java.util.Map;
 public interface OrderItemService extends IService<OrderItemEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+    void receiveMessage(Message message, OrderReturnReasonEntity content, Channel channel);
 }
 

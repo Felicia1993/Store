@@ -13,6 +13,7 @@ import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -45,12 +46,12 @@ public class StoreOrderApplicationTests {
                 orderReturnReasonEntity.setName("哈哈");
                 //发送消息,如果发送的消息是个对象，会使用序列化机制，将对象写出去，对象必须实现serialize
                 String msg = "Hello World!";
-                rabbitTemplate.convertAndSend("hello.java.exchange", "hello.java", orderReturnReasonEntity);
+                rabbitTemplate.convertAndSend("hello.java.exchange", "hello.java", orderReturnReasonEntity, new CorrelationData(UUID.randomUUID().toString()));
                 logger.info("消息发送完成[{}]", orderReturnReasonEntity);
             } else {
                 OrderEntity orderEntity = new OrderEntity();
                 orderEntity.setOrderSn(UUID.randomUUID().toString());
-                rabbitTemplate.convertAndSend("hello.java.exchange","hello.java", orderEntity);
+                rabbitTemplate.convertAndSend("hello.java.exchange","hello.java", orderEntity,new CorrelationData(UUID.randomUUID().toString()));
             }
         }
     }

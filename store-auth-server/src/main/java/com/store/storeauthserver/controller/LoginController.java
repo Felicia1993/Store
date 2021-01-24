@@ -1,7 +1,10 @@
 package com.store.storeauthserver.controller;
 
+import com.store.common.utils.R;
 import com.store.storeauthserver.constant.AuthServerConstant;
+import com.store.storeauthserver.feign.MemberFeignService;
 import com.store.storeauthserver.vo.UserRegistVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -21,6 +24,8 @@ import java.util.stream.Collectors;
 @Controller
 public class LoginController {
     RedisTemplate redisTemplate;
+    @Autowired
+    MemberFeignService memberFeignService;
     /**
      * 发送一个轻轻直接跳转到一个页面
      * Springmvc viewcontroller：将轻轻和页面映射过滤
@@ -39,6 +44,7 @@ public class LoginController {
     /**
      * todo:重定向携带数据利用session
      * 模拟重定向携带数据
+     *
      * @param vo
      * @param result
      * @param redirectAttributes
@@ -54,14 +60,14 @@ public class LoginController {
          *                 return
          *             });
          */
-        if(result.hasErrors()) {
-            Map<String,String> errors = new HashMap<>();
+        if (result.hasErrors()) {
+            Map<String, String> errors = new HashMap<>();
             result.getFieldErrors().stream().collect(Collectors.toMap(fieldError -> {
                 return fieldError.getField();
             }, fieldError -> {
                 return fieldError.getDefaultMessage();
             }));
-         //   model.addAttribute("errors");
+            //   model.addAttribute("errors");
             redirectAttributes.addFlashAttribute("errors", errors);
             //如果校验出错转发到注册页
             return "forward:/auth.store.com/reg.html";
@@ -71,26 +77,32 @@ public class LoginController {
         String code = vo.getCode();
         String s = (String) redisTemplate.opsForValue().get(AuthServerConstant.StatusEnum.SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX);
         if (!StringUtils.isEmpty(s)) {
-            if (code.equals(s)) {
-                s.split("_");
-                if (code.equals(s.split("_")[0])){
-                    //验证码通过，真正注册，调用远程服务进行注册
-                    //删除验证码
-                    redisTemplate.delete(AuthServerConstant.StatusEnum.SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX + vo.getPhone());
-
+            if (code.equals(s.split("_")[0])) {
+                //验证码通过，真正注册，调用远程服务进行注册
+                //删除验证码
+                redisTemplate.delete(AuthServerConstant.StatusEnum.SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX + vo.getPhone());
+                R regist = memberFeignService.regist(vo);
+                if (regist.getCode() == 0) {
+                    //成功
+                    HashMap<String, String> errors = new HashMap<>();
+                    redirectAttributes.addFlashAttribute("errors", errors);
+                    return "redirect:/login.html";
                 } else {
-                    Map<String,String> errors = new HashMap<>();
-                    errors.put("code","验证码错误");
-                    //校验出错，转发到注册页
+                    //失败
                     return "redirect:/reg.html";
                 }
+            } else {
+                Map<String, String> errors = new HashMap<>();
+                errors.put("code", "验证码错误");
+                //校验出错，转发到注册页
+                return "redirect:/reg.html";
             }
         } else {
-            Map<String,String> errors = new HashMap<>();
-            errors.put("code","验证码错误");
+            Map<String, String> errors = new HashMap<>();
+            errors.put("code", "验证码错误");
             //校验出错，转发到注册页
             return "redirect:/reg.html";
         }
-        return "redirect:/login.html";
+
     }
 }

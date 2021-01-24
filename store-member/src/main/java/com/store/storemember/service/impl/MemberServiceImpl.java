@@ -7,6 +7,7 @@ import com.store.storemember.exception.PhoneExistException;
 import com.store.storemember.exception.UsernameExistException;
 import com.store.storemember.vo.MemberRegistgVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.attribute.UserPrincipalNotFoundException;
@@ -57,6 +58,11 @@ public class MemberServiceImpl extends ServiceImpl<MemberDao, MemberEntity> impl
         entity.setMobile(vo.getPhone());
         entity.setUsername(vo.getUserName());
         //密码加密存储
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String password = passwordEncoder.encode(vo.getPassword());
+        entity.setPassword(password);
+        //其他默认信息
+        //保存
         memberDao.insert(entity);
     }
 

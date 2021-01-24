@@ -5,6 +5,8 @@ import java.util.Map;
 
 import com.store.common.exception.BizCodeEnum;
 import com.store.common.vo.SocialUser;
+import com.store.storemember.exception.PhoneExistException;
+import com.store.storemember.exception.UsernameExistException;
 import com.store.storemember.feign.CouponFeignService;
 import com.store.storemember.vo.MemberRegistgVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,8 +46,10 @@ public class MemberController {
     public R regist(@RequestBody MemberRegistgVo vo) {
         try {
             memberService.regist(vo);
-        } catch (Exception e) {
-
+        } catch (UsernameExistException e) {
+            return R.error(BizCodeEnum.USER_EXIST_EXCEPTION.getCode(), BizCodeEnum.USER_EXIST_EXCEPTION.getMsg());
+        } catch (PhoneExistException e) {
+            return R.error(BizCodeEnum.PHONE_EXIST_EXCEPTION.getCode(), BizCodeEnum.PHONE_EXIST_EXCEPTION.getMsg());
         }
 
         return R.ok();

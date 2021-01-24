@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.Map;
 
 import com.store.common.exception.BizCodeEnum;
-import com.store.common.vo.SocialUser;
 import com.store.storemember.exception.PhoneExistException;
 import com.store.storemember.exception.UsernameExistException;
 import com.store.storemember.feign.CouponFeignService;
 import com.store.storemember.vo.MemberLoginVo;
 import com.store.storemember.vo.MemberRegistgVo;
+import com.store.storemember.vo.SocialUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -57,7 +57,7 @@ public class MemberController {
     }
 
     public R oauthlogin(@RequestBody SocialUser vo) {
-        MemberEntity memberEntity = memberService.login(vo);
+        MemberEntity memberEntity = memberService.oauthlogin(vo);
         if (memberEntity != null) {
             //1.登录成功处理
             return R.ok();

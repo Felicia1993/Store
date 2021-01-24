@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * 使用RabbitMq
@@ -29,6 +30,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableRabbit
 @SpringBootApplication
 @MapperScan("com.store.storeorder.dao")
+@EnableRedisHttpSession
 public class StoreOrderApplication {
     public static void main(String[] args) {
         SpringApplication.run(StoreOrderApplication.class,args);

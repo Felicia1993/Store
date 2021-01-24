@@ -1,17 +1,23 @@
 package com.store.storemember.service.impl;
 
-import com.store.common.vo.SocialUser;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.store.common.utils.HttpUtils;
 import com.store.storemember.dao.MemberLevelDao;
 import com.store.storemember.entity.MemberLevelEntity;
 import com.store.storemember.exception.PhoneExistException;
 import com.store.storemember.exception.UsernameExistException;
 import com.store.storemember.vo.MemberLoginVo;
 import com.store.storemember.vo.MemberRegistgVo;
+import com.store.storemember.vo.SocialUser;
+import org.apache.http.HttpResponse;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -22,6 +28,8 @@ import com.store.common.utils.Query;
 import com.store.storemember.dao.MemberDao;
 import com.store.storemember.entity.MemberEntity;
 import com.store.storemember.service.MemberService;
+
+import javax.servlet.http.HttpSession;
 
 
 @Service("memberService")
@@ -38,10 +46,46 @@ public class MemberServiceImpl extends ServiceImpl<MemberDao, MemberEntity> impl
         return new PageUtils(page);
     }
     @Override
-    public MemberEntity login(SocialUser socialUser) {
+    public MemberEntity oauthlogin(SocialUser socialUser) {
         //登录和注册合并逻辑
         socialUser.getUid();
-        MemberEntity memberEntity = new MemberEntity();
+        MemberDao memberDao = this.baseMapper;
+        MemberEntity memberEntity = memberDao.selectOne(new QueryWrapper<MemberEntity>().eq("social_user", socialUser));
+        if (memberEntity != null) {
+            //这个用户已经注册
+            MemberEntity update = new MemberEntity();
+            update.setId(memberEntity.getId());
+            update.setAccess_token(memberEntity.getAccess_token());
+            update.setExpire_in(memberEntity.getExpire_in());
+            memberDao.updateById(update);
+            memberEntity.setAccess_token(socialUser.getAccess_token());
+            memberEntity.setExpire_in(socialUser.getExpires_in());
+            return memberEntity;
+        } else {
+            //2.没有查到当前社交用户对应的记录我们需要注册一个
+            MemberEntity register = new MemberEntity();
+            HashMap<String, String> query = new HashMap<>();
+            try {
+                HttpResponse response = HttpUtils.doGet("http://api.weibo.com", "2/users/show.json", "get", new HashMap<String, String>(), query);
+                if (response.getStatusLine().getStatusCode() == 200) {
+                    //查询成功
+                    String json = EntityUtils.toString(response.getEntity());
+                    JSONObject jsonObject = JSON.parseObject(json);
+                    String name = jsonObject.getString("name");
+                    String gender = jsonObject.getString("gender");
+                    //...
+                    register.setNickname(name);
+                    register.setGender("m".equals(gender) ? 1:0);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }//...
+            register.setSocialUid(socialUser.getUid());
+            register.setAccess_token(socialUser.getAccess_token());
+            register.setExpire_in(socialUser.getExpires_in());
+            memberDao.insert(register);
+
+        }
         return memberEntity;
     }
     @Override

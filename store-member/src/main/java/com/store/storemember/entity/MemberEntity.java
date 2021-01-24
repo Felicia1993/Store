@@ -32,6 +32,8 @@ public class MemberEntity implements Serializable {
 	 * ÓÃ»§Ãû
 	 */
 	private String username;
+	private String access_token;
+	private String socialUid;
 	/**
 	 * ÃÜÂë
 	 */
@@ -92,5 +94,6 @@ public class MemberEntity implements Serializable {
 	 * ×¢²áÊ±¼ä
 	 */
 	private Date createTime;
+	private String expire_in;
 
 }

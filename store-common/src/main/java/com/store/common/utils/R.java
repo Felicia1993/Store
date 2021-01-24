@@ -1,5 +1,7 @@
 package com.store.common.utils;
 
+import com.alibaba.fastjson.TypeReference;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +15,7 @@ import java.util.Map;
 public class R<T> extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
     private T data;
-    public T getData() {
+    public String getData(String msg, TypeReference<String> typeReference) {
         return data;
     }
     public void setData(T data) {

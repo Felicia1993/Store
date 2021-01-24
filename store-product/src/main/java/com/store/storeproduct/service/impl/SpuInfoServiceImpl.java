@@ -79,7 +79,8 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         Map<Long, Integer>stockMap = null;
         try {
             R<List<SkuHasStockVo>> skuHasStock = feignService.getSkuHasStock(skuIdList);
-            stockMap = skuHasStock.getData().stream().collect(Collectors.toMap(SkuHasStockVo::getSkuId, item -> item.getHasStock()));
+            stockMap = skuHasStock.getData("msg", new TypeReference<String>() {
+            }).stream().collect(Collectors.toMap(SkuHasStockVo::getSkuId, item -> item.getHasStock()));
 
         } catch (Exception e){
             log.error("库存服务查询异常，原因{}",e);

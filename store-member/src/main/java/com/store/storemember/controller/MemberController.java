@@ -8,6 +8,7 @@ import com.store.common.vo.SocialUser;
 import com.store.storemember.exception.PhoneExistException;
 import com.store.storemember.exception.UsernameExistException;
 import com.store.storemember.feign.CouponFeignService;
+import com.store.storemember.vo.MemberLoginVo;
 import com.store.storemember.vo.MemberRegistgVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -114,6 +115,15 @@ public class MemberController {
 		memberService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+    @PostMapping("/login")
+    public R login(@RequestBody MemberLoginVo vo) {
+        MemberEntity ent = memberService.login_old(vo);
+        if(ent != null) {
+            return R.ok();
+        } else {
+            return R.error(BizCodeEnum.LOGINACCT_PASSWORD_INVALID_EXCEPTION.getCode(), BizCodeEnum.LOGINACCT_PASSWORD_INVALID_EXCEPTION.getMsg());
+        }
     }
 
 }

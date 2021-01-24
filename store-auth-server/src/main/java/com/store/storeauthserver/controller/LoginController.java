@@ -1,8 +1,10 @@
 package com.store.storeauthserver.controller;
 
+import com.alibaba.fastjson.TypeReference;
 import com.store.common.utils.R;
 import com.store.storeauthserver.constant.AuthServerConstant;
 import com.store.storeauthserver.feign.MemberFeignService;
+import com.store.storeauthserver.vo.UserLoginVo;
 import com.store.storeauthserver.vo.UserRegistVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.BindResult;
@@ -89,6 +91,9 @@ public class LoginController {
                     return "redirect:/login.html";
                 } else {
                     //失败
+                    Map<String, String> errors = new HashMap<>();
+                    errors.put("mgs",regist.getData("msg", new TypeReference<String>(){}));
+                    redirectAttributes.addFlashAttribute(errors);
                     return "redirect:/reg.html";
                 }
             } else {
@@ -101,6 +106,20 @@ public class LoginController {
             Map<String, String> errors = new HashMap<>();
             errors.put("code", "验证码错误");
             //校验出错，转发到注册页
+            return "redirect:/reg.html";
+        }
+    }
+    @PostMapping("/login")
+    public String login(UserLoginVo vo, RedirectAttributes redirectAttributes) {
+        //远程登录
+        R login = memberFeignService.login(vo);
+        if (login.getCode() ==0) {
+            return "redirect:/http://store.com";
+        } else {
+            HashMap<String, String> errors = new HashMap<>();
+            errors.put("msg", login.getData("msg", new TypeReference<String>(){}));
+            redirectAttributes.addFlashAttribute("errors", errors);
+
             return "redirect:/reg.html";
         }
 

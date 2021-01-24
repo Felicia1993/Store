@@ -5,6 +5,7 @@ import com.store.storemember.dao.MemberLevelDao;
 import com.store.storemember.entity.MemberLevelEntity;
 import com.store.storemember.exception.PhoneExistException;
 import com.store.storemember.exception.UsernameExistException;
+import com.store.storemember.vo.MemberLoginVo;
 import com.store.storemember.vo.MemberRegistgVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -80,6 +81,29 @@ public class MemberServiceImpl extends ServiceImpl<MemberDao, MemberEntity> impl
         Integer mobile = memberDao.selectCount(new QueryWrapper<MemberEntity>().eq("mobile", phone));
         if(mobile > 0) {
             throw new PhoneExistException();
+        }
+    }
+    @Override
+    public MemberEntity login_old(MemberLoginVo vo) {
+        String loginAccount = vo.getLoginAccount();
+        String password = vo.getPassword();
+        //1.去数据库查询
+        MemberDao memberDao = this.baseMapper;
+        MemberEntity ent = memberDao.selectOne(new QueryWrapper<MemberEntity>().eq("username", loginAccount).or().eq("mobile", password));
+        if (ent == null) {
+            //登录失败
+            return null;
+        } else {
+            //获取到数据库的password
+            String passwordDb = ent.getPassword();
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            //密码匹配
+            boolean matches = passwordEncoder.matches(password, passwordDb);
+            if (matches) {
+                return ent;
+            } else {
+                return null;
+            }
         }
 
     }

@@ -6,12 +6,9 @@ import java.util.Map;
 import com.store.common.exception.BizCodeEnum;
 import com.store.common.vo.SocialUser;
 import com.store.storemember.feign.CouponFeignService;
+import com.store.storemember.vo.MemberRegistgVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.store.storemember.entity.MemberEntity;
 import com.store.storemember.service.MemberService;
@@ -42,6 +39,16 @@ public class MemberController {
         R membercoupons = couponFeignService.membercoupons();
 
         return R.ok().put("member", memberEntity).put("coupons", membercoupons.get("coupons"));
+    }
+    @PostMapping("/regist")
+    public R regist(@RequestBody MemberRegistgVo vo) {
+        try {
+            memberService.regist(vo);
+        } catch (Exception e) {
+
+        }
+
+        return R.ok();
     }
 
     public R oauthlogin(@RequestBody SocialUser vo) {

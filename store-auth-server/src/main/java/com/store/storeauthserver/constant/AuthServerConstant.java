@@ -3,7 +3,8 @@ package com.store.storeauthserver.constant;
 public class AuthServerConstant {
     //
     public enum StatusEnum{
-        SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX(0,"新建");
+        SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX(0,"新建"),
+        LOGIN_USER(1,"登录用户");
         private int code;
         private String msg;
 

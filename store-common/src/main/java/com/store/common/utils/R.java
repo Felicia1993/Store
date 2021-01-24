@@ -15,7 +15,7 @@ import java.util.Map;
 public class R<T> extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
     private T data;
-    public String getData(String msg, TypeReference<String> typeReference) {
+    public T getData(String msg, TypeReference<String> typeReference) {
         return data;
     }
     public void setData(T data) {

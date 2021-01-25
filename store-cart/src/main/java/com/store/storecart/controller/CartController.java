@@ -2,6 +2,7 @@ package com.store.storecart.controller;
 
 import com.store.storecart.interceptor.CartInterceptor;
 import com.store.storecart.service.CartService;
+import com.store.storecart.vo.Cart;
 import com.store.storecart.vo.CartItem;
 import com.store.storecart.vo.UserInfoTo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,16 +33,12 @@ public class CartController {
      * @return
      */
     @GetMapping("/cart.html")
-    public String cartListPage(HttpSession session) {
+    public String cartListPage(Model model) {
         //1.快速得到用户信息
-        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
+    //    UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
         System.out.println("userInfoTo");
-        Object attribute = session.getAttribute(AuthServerConstant.StatusEnum.LOGIN_USER);
-        if(attribute != null) {
-
-        } else {
-
-        }
+        Cart cart = cartService.getCart();
+        model.addAttribute(cart);
         return "cartList";
     }
 

@@ -6,6 +6,12 @@ spring:
     password: xieqiqi037005
     url: jdbc:mysql://127.0.0.1:3306/store_wms
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    application:
+      name: store-ware
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:

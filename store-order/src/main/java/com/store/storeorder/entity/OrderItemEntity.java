@@ -46,47 +46,47 @@ public class OrderItemEntity implements Serializable {
 	 */
 	private String spuPic;
 	/**
-	 * Æ·ÅÆ
+	 * spu品牌
 	 */
 	private String spuBrand;
 	/**
-	 * ÉÌÆ··ÖÀàid
+	 * 三级目录ID
 	 */
 	private Long categoryId;
 	/**
-	 * ÉÌÆ·sku±àºÅ
+	 * 商品skuId
 	 */
 	private Long skuId;
 	/**
-	 * ÉÌÆ·skuÃû×Ö
+	 * 商品sku名称
 	 */
 	private String skuName;
 	/**
-	 * ÉÌÆ·skuÍ¼Æ¬
+	 * 商品sku图片
 	 */
 	private String skuPic;
 	/**
-	 * ÉÌÆ·sku¼Û¸ñ
+	 * 商品sku价格
 	 */
 	private BigDecimal skuPrice;
 	/**
-	 * ÉÌÆ·¹ºÂòµÄÊýÁ¿
+	 * 商品购买数量
 	 */
 	private Integer skuQuantity;
 	/**
-	 * ÉÌÆ·ÏúÊÛÊôÐÔ×éºÏ£¨JSON£©
+	 * É商品销售属性组合（JSON）
 	 */
 	private String skuAttrsVals;
 	/**
-	 * ÉÌÆ·´ÙÏú·Ö½â½ð¶î
+	 * 商品促销分解金额
 	 */
 	private BigDecimal promotionAmount;
 	/**
-	 * ÓÅ»ÝÈ¯ÓÅ»Ý·Ö½â½ð¶î
+	 * 优惠券优惠分解金额
 	 */
 	private BigDecimal couponAmount;
 	/**
-	 * »ý·ÖÓÅ»Ý·Ö½â½ð¶î
+	 * 积分优惠分解金额
 	 */
 	private BigDecimal integrationAmount;
 	/**

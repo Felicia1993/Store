@@ -16,12 +16,11 @@ public class OrderConfirmVo {
     //送货清单,所有选中的购物项
     @Setter @Getter
     List<OrderItemVo> items;
-
+    @Setter @Getter
+    String orderToken;
     //发票记录。。。
     //优惠券信息
     Integer integration;
-    @Setter @Getter
-    String orderToken;
     BigDecimal total;//订单总额
     public BigDecimal getTotal() {
         BigDecimal total = new BigDecimal("0");

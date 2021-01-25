@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient
+@FeignClient("store-member")
 public interface MemberFeignServie {
     @GetMapping("/{memberId}/addresses")
     List<MemberAddressVo> getAddress(Long memberId);

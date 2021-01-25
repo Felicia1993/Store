@@ -23,4 +23,5 @@
             </foreach>
         AND search_type=1
     </select>
+
 </mapper>

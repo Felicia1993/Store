@@ -6,11 +6,15 @@ import com.store.storecart.vo.CartItem;
 import com.store.storecart.vo.UserInfoTo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.store.common.constant.AuthServerConstant;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 @Controller
 public class CartController {
@@ -39,6 +43,33 @@ public class CartController {
 
         }
         return "cartList";
+    }
+
+    /**
+     * RedirectAttributes
+     * addFlashAttribute将数据放入session，可以在页面取出，但是只能取一次
+     * addAttribute 将数据放在url中
+     *
+     * @param skuId
+     * @param num
+     * @param redirectAttributes
+     * @return
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
+    @GetMapping("/addToCart")
+    public String addToCart(@RequestParam("skuId") Long skuId, @RequestParam("num") Integer num, RedirectAttributes redirectAttributes) throws ExecutionException, InterruptedException {
+       CartItem cartItem = cartService.addToCart(skuId, num);
+        redirectAttributes.addAttribute("skuId", skuId);
+        redirectAttributes.addFlashAttribute()
+        return "redirect:http://store.com/addToCartSuccess.html";
+    }
+    @GetMapping("/addToCartSuccess.html")
+    public String addToCartSuccessPage(@RequestParam("skuId") Long skuId, Model model) {
+        //重定向到成功页面，再次查询购物车即可
+        CartItem cartItem = cartService.getCartItem(skuId);
+        model.addAttribute("item", cartItem);
+        return "success";
     }
 
     @GetMapping("/currentUserCartItems")

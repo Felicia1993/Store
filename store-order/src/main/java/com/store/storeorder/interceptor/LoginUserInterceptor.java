@@ -12,8 +12,7 @@ public class LoginUserInterceptor implements HandlerInterceptor {
     public static ThreadLocal<MemberRespVo> loginUser = new ThreadLocal<>();
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        //todo:此处常量有问题
-        MemberRespVo attribute = (MemberRespVo) request.getSession().getAttribute(String.valueOf(AuthServerConstant.StatusEnum.LOGIN_USER));
+        MemberRespVo attribute = (MemberRespVo) request.getSession().getAttribute(AuthServerConstant.StatusEnum.LOGIN_USER);
         if (attribute != null) {
             loginUser.set(attribute);
             return true;

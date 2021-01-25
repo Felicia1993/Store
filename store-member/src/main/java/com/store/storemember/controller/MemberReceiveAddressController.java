@@ -1,6 +1,7 @@
 package com.store.storemember.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +80,10 @@ public class MemberReceiveAddressController {
 		memberReceiveAddressService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+    @RequestMapping("/{memberId}/addresses")
+    public List<MemberReceiveAddressEntity> getAddress(Long memberId) {
+        return memberReceiveAddressService.getAddress(memberId);
     }
 
 }

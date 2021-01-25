@@ -4,6 +4,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.store.common.utils.R;
 import com.store.storeauthserver.constant.AuthServerConstant;
 import com.store.storeauthserver.feign.MemberFeignService;
+import com.store.storeauthserver.vo.SocialUser;
 import com.store.storeauthserver.vo.UserLoginVo;
 import com.store.storeauthserver.vo.UserRegistVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,12 +78,12 @@ public class LoginController {
         //真正注册，调用远程服务
         //1.校验验证码
         String code = vo.getCode();
-        String s = (String) redisTemplate.opsForValue().get(AuthServerConstant.StatusEnum.SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX);
+        String s = (String) redisTemplate.opsForValue().get(AuthServerConstant.StatusEnum.SMS_CODE_CACHE_PREFIX);
         if (!StringUtils.isEmpty(s)) {
             if (code.equals(s.split("_")[0])) {
                 //验证码通过，真正注册，调用远程服务进行注册
                 //删除验证码
-                redisTemplate.delete(AuthServerConstant.StatusEnum.SMS_CSMS_CODE_CHACHE_PREFIODE_CHACHE_PREFIX + vo.getPhone());
+                redisTemplate.delete(AuthServerConstant.StatusEnum.SMS_CODE_CACHE_PREFIX + vo.getPhone());
                 R regist = memberFeignService.regist(vo);
                 if (regist.getCode() == 0) {
                     //成功
@@ -92,7 +93,7 @@ public class LoginController {
                 } else {
                     //失败
                     Map<String, String> errors = new HashMap<>();
-                    errors.put("mgs",regist.getData("msg", new TypeReference<String>(){}));
+                    errors.put("mgs", (String) regist.getData("msg", new TypeReference<String>(){}));
                     redirectAttributes.addFlashAttribute(errors);
                     return "redirect:/reg.html";
                 }
@@ -110,14 +111,14 @@ public class LoginController {
         }
     }
     @PostMapping("/login")
-    public String login(UserLoginVo vo, RedirectAttributes redirectAttributes) {
+    public String login(SocialUser vo, RedirectAttributes redirectAttributes) {
         //远程登录
-        R login = memberFeignService.login(vo);
+        R login = memberFeignService.oauthlogin(vo);
         if (login.getCode() ==0) {
             return "redirect:/http://store.com";
         } else {
             HashMap<String, String> errors = new HashMap<>();
-            errors.put("msg", login.getData("msg", new TypeReference<String>(){}));
+            errors.put("msg", (String) login.getData("msg", new TypeReference<String>(){}));
             redirectAttributes.addFlashAttribute("errors", errors);
 
             return "redirect:/reg.html";

@@ -61,7 +61,6 @@ public class CartController {
     public String addToCart(@RequestParam("skuId") Long skuId, @RequestParam("num") Integer num, RedirectAttributes redirectAttributes) throws ExecutionException, InterruptedException {
        CartItem cartItem = cartService.addToCart(skuId, num);
         redirectAttributes.addAttribute("skuId", skuId);
-        redirectAttributes.addFlashAttribute()
         return "redirect:http://store.com/addToCartSuccess.html";
     }
     @GetMapping("/addToCartSuccess.html")

@@ -71,27 +71,27 @@ public class MemberEntity implements Serializable {
 	 */
 	private String job;
 	/**
-	 * ¸öÐÔÇ©Ãû
+	 * 个性签名
 	 */
 	private String sign;
 	/**
-	 * ÓÃ»§À´Ô´
+	 * 用户来源
 	 */
 	private Integer sourceType;
 	/**
-	 * »ý·Ö
+	 * 会员积分
 	 */
 	private Integer integration;
 	/**
-	 * ³É³¤Öµ
+	 * 成长值
 	 */
 	private Integer growth;
 	/**
-	 * ÆôÓÃ×´Ì¬
+	 * 启用状态
 	 */
 	private Integer status;
 	/**
-	 * ×¢²áÊ±¼ä
+	 * 注册时间
 	 */
 	private Date createTime;
 	private String expire_in;

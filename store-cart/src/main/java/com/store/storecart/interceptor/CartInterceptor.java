@@ -25,7 +25,7 @@ public class CartInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
-        MemberRespVo member = (MemberRespVo) session.getAttribute(AuthServerConstant.StatusEnum.LOGIN_USER);
+        MemberRespVo member = (MemberRespVo) session.getAttribute(AuthServerConstant.LOGIN_USER);
         UserInfoTo userInfoTo = new UserInfoTo();
         if(member != null) {
             //用户登录
@@ -33,7 +33,7 @@ public class CartInterceptor implements HandlerInterceptor {
 
         }
         Cookie[] cookies = request.getCookies();
-        for(cookies !=null && cookies.length > 0) {
+        if (cookies !=null && cookies.length > 0) {
             for(Cookie cookie : cookies) {
                 //user-key
                 String name = cookie.getName();

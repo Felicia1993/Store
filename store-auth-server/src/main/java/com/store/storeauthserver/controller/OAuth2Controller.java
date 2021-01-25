@@ -52,7 +52,7 @@ public class OAuth2Controller {
              */
             R oauthlogin = memberFeignService.oauthlogin(socialUser);
             if (oauthlogin.getCode() == 0) {
-                String data = oauthlogin.getData("data", new TypeReference<MemberRespVo>() {
+                String data = (String) oauthlogin.getData("data", new TypeReference<MemberRespVo>() {
                 });
                 /**
                  * 1.第一次使用session：命令浏览器保存卡号，以后浏览器访问哪个网站就会带上这个网站的cookie，子域之间，发卡的时候，及时是子域系统发的卡，也能让父域直接使用

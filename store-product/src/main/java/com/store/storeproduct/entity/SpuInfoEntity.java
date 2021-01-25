@@ -49,6 +49,7 @@ public class SpuInfoEntity implements Serializable {
 	 * ÉÏ¼Ü×´Ì¬[0 - ÏÂ¼Ü£¬1 - ÉÏ¼Ü]
 	 */
 	private Integer publishStatus;
+	private BigDecimal price;
 	/**
 	 * 
 	 */

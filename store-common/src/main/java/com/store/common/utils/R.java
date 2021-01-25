@@ -18,8 +18,9 @@ public class R<T> extends HashMap<String, Object> {
     public T getData(String msg, TypeReference<String> typeReference) {
         return data;
     }
-    public void setData(T data) {
+    public R setData(T data) {
         this.data = data;
+        return null;
     }
 
     public R() {

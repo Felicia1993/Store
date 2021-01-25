@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.store.common.constant.AuthServerConstant;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
@@ -29,11 +30,10 @@ public class CartController {
      * 登录：session有
      * 未登录：cookie user-key
      * 第一次如果没有临时用户，帮忙创建临时用户
-     * @param session
      * @return
      */
     @GetMapping("/cart.html")
-    public String cartListPage(Model model) {
+    public String cartListPage(Model model) throws ExecutionException, InterruptedException {
         //1.快速得到用户信息
     //    UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
         System.out.println("userInfoTo");
@@ -69,6 +69,7 @@ public class CartController {
     }
 
     @GetMapping("/currentUserCartItems")
+    @ResponseBody
     public List<CartItem> getCurrentUserCartItems() {
         return cartService.getUserCartItems();
     }

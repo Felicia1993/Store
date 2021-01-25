@@ -1,5 +1,6 @@
 package com.store.storeproduct.controller;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,11 @@ import com.store.common.utils.R;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
-
+    @GetMapping("/{skuId}/price")
+    public BigDecimal getPrice(@PathVariable("spuId") Long skuId) {
+        SpuInfoEntity byId = spuInfoService.getById(skuId);
+        return byId.getPrice();
+    }
     /**
      * 商品上架
      */

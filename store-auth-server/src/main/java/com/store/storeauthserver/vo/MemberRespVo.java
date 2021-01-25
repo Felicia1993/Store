@@ -19,4 +19,5 @@ public class MemberRespVo implements Serializable {
     private String city;
     private String job;
     private String sign;
+    private String integration;
 }

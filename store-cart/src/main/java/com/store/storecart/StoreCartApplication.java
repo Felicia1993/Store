@@ -7,9 +7,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
 
 @EnableDiscoveryClient
-@EnableFeignClients
 @SpringBootApplication
-@FeignClient
+@EnableFeignClients
 public class StoreCartApplication {
 
     public static void main(String[] args) {

@@ -78,12 +78,12 @@ public class LoginController {
         //真正注册，调用远程服务
         //1.校验验证码
         String code = vo.getCode();
-        String s = (String) redisTemplate.opsForValue().get(AuthServerConstant.StatusEnum.SMS_CODE_CACHE_PREFIX);
+        String s = (String) redisTemplate.opsForValue().get(AuthServerConstant.SMS_CODE_CACHE_PREFIX);
         if (!StringUtils.isEmpty(s)) {
             if (code.equals(s.split("_")[0])) {
                 //验证码通过，真正注册，调用远程服务进行注册
                 //删除验证码
-                redisTemplate.delete(AuthServerConstant.StatusEnum.SMS_CODE_CACHE_PREFIX + vo.getPhone());
+                redisTemplate.delete(AuthServerConstant.SMS_CODE_CACHE_PREFIX + vo.getPhone());
                 R regist = memberFeignService.regist(vo);
                 if (regist.getCode() == 0) {
                     //成功

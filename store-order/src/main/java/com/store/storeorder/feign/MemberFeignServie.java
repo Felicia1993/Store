@@ -9,6 +9,6 @@ import java.util.List;
 
 @FeignClient("store-member")
 public interface MemberFeignServie {
-    @GetMapping("/{memberId}/addresses")
+    @GetMapping("/storemember/member/{memberId}/addresses")
     List<MemberAddressVo> getAddress(Long memberId);
 }

@@ -276,3 +276,72 @@ redis （采用）
 - 修改商品的数量、移除、选中商品
 - 在购物车中展示优惠信息 
 - 提示购物车的价格变化
+
+## 幂等性 
+### 天然幂等性： 
+
+select * from table_name where id=? 无论执行多少次都不会改变状态，是天然幂等的 
+
+update tab1 set co1=1 where co2=2, 无论执行多少次都不会改变状态，是天然幂等的  
+
+delete from user where userId=1,多次操作，结果一样，具备幂等性 
+
+insert into user(userid,username) values(1,'a');//userid为唯一主键，重复操作上面的操作，只会插入一条用户数据，具备幂等性 
+
+### 不具备幂等性
+update tab1 set  col1=col1+1 where col2=2,每次执行结果都会发生变化，不是幂等 
+
+nsert into user(userid,username) values(1,'a');userid不是主键，可以重复，不是幂等的 
+
+## 幂等解决方案
+### 1.token机制
+1.服务端提供了发送token的接口。哪些业务存在幂等性问题，就要在业务执行之前，先去获取token，服务器会把token保存在redis中。 
+
+2.客户端调用服务器请求的时候，把token放入请求头带过去， 
+
+3.服务器判断token是否在redis中，存在表示第一次请求，然后删除token，继续执行业务 
+
+4.如果判断token不存在redis中，就表示重复操作，直接返回重复标识给客户端，保证业务代码不被重复执行。 
+
+#### 危险性
+1.先删除token还是后删除token 
+
+先删除可能导致：业务没有执行，重试还带上之前的token，导致重试也不能执行 
+
+后删除可能导致：业务处理成功，但是服务闪断，出现超时，没有删除token，重试后，导致业务执行两次 
+
+2.token获取，比较和删除必须是原子性 
+
+1.redis.get(token), token.equals, redis.del(token)必须为原子性，可以通过lua脚本执行 
+
+### 2.各种锁机制
+1.数据库悲观锁 
+
+select * from xxx where id=1 for update; id字段一定是唯一索引或者主键，不然可能造成锁表 
+
+2.数据库乐观锁机制 
+
+update table_name set count = count-1, version=version+1 where good_id=1 and version=1; 
+
+3.业务层使用分布式锁 
+
+获取到锁的必须先判断这个数据是否被处理过 
+
+### 3.唯一性约束  
+1.数据库唯一约束   
+
+插入数据，按照唯一索引进行插入，这个机制利用了数据库的主键唯一约束性，解决了insert场景幂等性的问题，但是主键的要求不是自增的主键，就需要业务生成全局唯一的主键。如果是分库分表的场景下，路由规则要保证相同请求下，落地在同一个数据库和同一表中，否则数据库主键约束就不起效果了。
+
+2.redis set防重 
+
+例如可以计算数据的md5放入redis的set，每次处理数据，先看md5是否存在，存在就不处理 
+
+### 4.防重表 
+
+使用订单号orderno作为去重表的唯一索引，把唯一索引插入去重表，在进行业务操作，且他们在同一个事务中。去重表和业务表应该在同一个库中，就保证了能够在同一个事务中 
+
+### 5.全局请求唯一id 
+
+调用接口时，生成一个唯一id，redis将数据保存到集合中，存在即处理过。可以使用nginx设置每一个请求的唯一id 
+
+proxy_set_header X-Request-id $request_id;

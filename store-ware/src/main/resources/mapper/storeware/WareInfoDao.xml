@@ -10,6 +10,11 @@
         <result property="address" column="address"/>
         <result property="areacode" column="areacode"/>
     </resultMap>
-
-
+    <select id="listWareIdHasSkuStock" resultType="java.lang.Long">
+        SELECT ware_id FROM `wms_ware_sku` WHERE sku_id=#{skuId} AND stock-stock_locked > 0
+    </select>
+    <update id="lockSkuStock" >
+        update `wms_ware_sku` SET stock_locked = stock_locked+ #{wareNum}
+        where sku_id=#{skuId} and ware_id=#{wareId} and stock-stock_locked >= #{wareNum}
+    </update>
 </mapper>

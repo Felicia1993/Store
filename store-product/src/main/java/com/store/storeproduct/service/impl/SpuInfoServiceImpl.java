@@ -1,5 +1,6 @@
 package com.store.storeproduct.service.impl;
 
+import com.alibaba.fastjson.TypeReference;
 import com.store.common.constant.ProductConstant;
 import com.store.common.to.SkuHasStockVo;
 import com.store.common.to.es.SkuEsModel;
@@ -130,7 +131,13 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
             //todo 7 接口幂等性：重试机制
         }
         return upProducts;
-
+    }
+    @Override
+    public SpuInfoEntity getSpuInfoBySkuId(Long skuId) {
+        SkuInfoEntity byId = skuInfoService.getById(skuId);
+        Long spuId = byId.getSpuId();
+        SpuInfoEntity spuInfoEntity = getById(spuId);
+        return spuInfoEntity;
     }
 
 }

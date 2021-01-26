@@ -67,4 +67,8 @@ public class R<T> extends HashMap<String, Object> {
     public int getCode() {
         return 0;
     }
+
+    public T getData(TypeReference<R> fareVoTypeReference) {
+        return data;
+    }
 }

@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient("store-ware")
 public interface WmsFeignService {
     @GetMapping("/storeware/wareinfo/fare")
-    public R getFare(@RequestParam("addrId" ) Long addrId);
+    R getFare(@RequestParam("addrId" ) Long addrId);
 }

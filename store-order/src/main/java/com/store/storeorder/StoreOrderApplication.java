@@ -5,6 +5,7 @@ import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
@@ -27,7 +28,23 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
  *
  * @RabbitListener：类+方法上 监听哪些队列
  * @RabbitHandler：标在方法上 重载区分不同消息
+ *
+ * seata控制分布式事务
+ * 1）每一个微服务创建undo_log表
+ * 2）安装事务协调器：seata-server:http://github.com/seata/seata/release
+ *  整合：
+ *      1.导入依赖spring-cloud-alibaba-seataSeaTac seata-all:0.7.1
+ *      2.解压并启动seata服务器
+ *          registry.conf：注册中心配置：修改registry type=nacos
+ *          file.conf
+ *      3.所有想要用到分布式事务的微服务，都要使用seata DataSourceProxy代理自己的数据源
+ *      properties.initializeDataSourceBuilder().type(type).build();
+ *      4.每个微服务，都必须导入 register.conf
+ *      file.conf
+ *      5.启动测试分布式事务
+ *      6.给分布式大事务的入口标注@GlobalTransactional全局事务，每个远程小事务用@Transaction
  */
+@EnableAspectJAutoProxy(exposeProxy = true)
 @EnableRabbit
 @SpringBootApplication
 @MapperScan("com.store.storeorder.dao")

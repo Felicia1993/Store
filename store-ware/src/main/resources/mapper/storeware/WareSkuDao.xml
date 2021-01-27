@@ -16,4 +16,7 @@
     <select id="getSkuStock" resultType="java.lang.Long">
         SELECT SUM(stock-stock_count) FROM `wms_ware_sku` WHERE sku_id=#{skuId}
     </select>
+    <insert id="addStock" >
+        insert into wms_ware_sku where sku_id=#{skuId} and ware_id=#{wareId} and  skuNum = #{skuNum}
+    </insert>
 </mapper>

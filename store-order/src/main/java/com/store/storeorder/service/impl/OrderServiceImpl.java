@@ -6,8 +6,6 @@ import com.store.common.constant.ProductConstant;
 import com.store.common.utils.R;
 import com.store.storeauthserver.vo.MemberRespVo;
 import com.store.storeorder.contant.OrderConstant;
-import com.store.storeorder.controller.OrderItemController;
-import com.store.storeorder.dao.OrderItemDao;
 import com.store.storeorder.entity.OrderItemEntity;
 import com.store.storeorder.enume.OrderStatusEnum;
 import com.store.storeorder.feign.CartFeignService;
@@ -18,6 +16,7 @@ import com.store.storeorder.interceptor.LoginUserInterceptor;
 import com.store.storeorder.service.OrderItemService;
 import com.store.storeorder.to.OrderCreateTo;
 import com.store.storeorder.vo.*;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -107,6 +106,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         CompletableFuture.allOf(getAddressFuture,getCartItemsfuture ).get();
         return confirmVo;
     }
+    @GlobalTransactional
     @Transactional
     @Override
     public SubmitOrderRespVo submitOrder(OrderSubmitVo vo) {
@@ -144,9 +144,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
                     return itemVo;
                 }).collect(Collectors.toList());
                 lockVo.setLocks(locks);
+                //库存成功了，但是网络原因超时了，订单回滚，库存不滚
+                //为了保证高并发，库存服务自己回滚，可以发消息给库存服务，库存服务可以本身使用自动解锁模式，消息队列
                 R r = wmsFeignService.orderLockStock(lockVo);
                 if (r.getCode() == 0) {
                     //锁成功了
+                    //todo:5.远程扣减积分出异常
                     return respVo;
                 } else {
                     //锁失败了

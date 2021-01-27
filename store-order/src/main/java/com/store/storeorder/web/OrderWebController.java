@@ -23,9 +23,10 @@ public class OrderWebController {
         return "confirm";
     }
     @PostMapping("/submitOrder")
-    public String submitOrder(OrderSubmitVo vo) {
+    public String submitOrder(OrderSubmitVo vo, Model model) {
         SubmitOrderRespVo responsevo =  orderService.submitOrder(vo);
         if (responsevo.getCode() == 0) {
+            model.addAttribute("submitOrderResp", responsevo);
             return "pay";
         } else {
             return "redirect:http://store.com/toTrade";

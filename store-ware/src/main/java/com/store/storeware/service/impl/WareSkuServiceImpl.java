@@ -1,6 +1,8 @@
 package com.store.storeware.service.impl;
 
+import com.store.common.utils.R;
 import com.store.storeware.exception.NoStockException;
+import com.store.storeware.feign.ProductFeignService;
 import com.store.storeware.vo.LockStockResult;
 import com.store.storeware.vo.OrderItemVo;
 import com.store.storeware.vo.SkuHasStockVo;
@@ -30,6 +32,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> implements WareSkuService {
     @Autowired
     WareSkuDao wareSkuDao;
+    @Autowired
+    ProductFeignService productFeignService;
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<WareSkuEntity> page = this.page(
@@ -108,6 +112,33 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
         private Long skuId;
         private List<Long> wareId;
         private Integer wareNum;
+    }
+    @Override
+    public void addStock(Long skuId, Long wareId, Integer skuNum) {
+        //1.判断如果还没有这个库存记录新增
+        List<WareSkuEntity> entities = wareSkuDao.selectList(new QueryWrapper<WareSkuEntity>().eq("skuId", skuId));
+        if (entities == null || entities.size() == 0) {
+            WareSkuEntity skuEntity = new WareSkuEntity();
+            skuEntity.setSkuId(skuId);
+            skuEntity.setStock(skuNum);
+            skuEntity.setWareId(wareId);
+            skuEntity.setStockLocked(0);
+            //todo: 元亨查询sku的名字，如果失败，整个事务无需回滚
+            //TODO 还可以用什么办法让异常以后不会滚？
+            try{
+                R info = productFeignService.info(skuId);
+                Map<String, Object> data = (Map<String, Object>) info.get("skuInfo");
+                if (info.getCode() == 0) {
+                    skuEntity.setSkuName((String) data.get("skuName"));
+                }
+            } catch (Exception e) {
+
+            }
+            wareSkuDao.insert(skuEntity);
+        } else {
+            wareSkuDao.addStock(skuId, wareId, skuNum);
+        }
+
     }
 
 }
